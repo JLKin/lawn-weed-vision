@@ -1,0 +1,109 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - paragraph [ref=e5]: 视觉模型 · 本地调试
+      - heading "智能除草机模型测试" [level=1] [ref=e6]
+      - paragraph [ref=e7]: 上传一张图片，检查分割模型的运行状态与识别结果。
+    - link "接口文档 ↗" [ref=e8] [cursor=pointer]:
+      - /url: /api-docs
+  - region "模型运行状态" [ref=e9]:
+    - generic [ref=e10]:
+      - status [ref=e11]: 模型已就绪，可以开始识别
+      - paragraph [ref=e12]: 模型版本：yolo26n-seg.pt@sha256:361fbfabab28
+    - button "刷新状态" [ref=e13] [cursor=pointer]
+  - paragraph [ref=e14]: 默认权重是通用预训练模型，仅用于部署测试。真实除草前需要使用草坪与杂草数据微调；完成标定前，地面坐标为空。
+  - generic [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]: "01"
+        - heading "上传与参数" [level=2] [ref=e19]
+      - group [ref=e21]:
+        - generic [ref=e22]: 待识别图片 必填
+        - generic [ref=e23]:
+          - button "待识别图片 必填 选择图片" [ref=e24]
+          - generic [ref=e25] [cursor=pointer]: 选择图片
+          - generic [ref=e26]: bus.jpg
+        - paragraph [ref=e27]: 支持 JPG、PNG、WebP，上传大小与像素数由服务配置限制。
+        - generic [ref=e28]: 相机编号 必填
+        - textbox "相机编号 必填" [ref=e29]: front_rgb
+        - paragraph [ref=e30]: "以英文字母或数字开头，最多 64 个字符，可包含 _ . : -"
+        - generic [ref=e31]: 采集时间戳 选填 · 纳秒
+        - textbox "采集时间戳 选填 · 纳秒" [ref=e32]:
+          - /placeholder: 留空表示不提供采集时间
+          - text: "1792735200123456789"
+        - paragraph [ref=e33]: 填写采集端的非负整数时间戳，最大值为 9223372036854775807。
+        - button "开始识别" [ref=e34] [cursor=pointer]
+      - status [ref=e35]: 识别完成，共返回 5 个实例。
+    - region "上传图片预览" [ref=e36]:
+      - generic [ref=e37]:
+        - generic [ref=e38]: "02"
+        - heading "图片预览" [level=2] [ref=e39]
+      - img "待识别图片的原图预览" [ref=e49]
+      - paragraph [ref=e42]: 这里显示上传原图，识别数据将在下方展示。
+  - region [ref=e43]:
+    - generic [ref=e44]:
+      - generic [ref=e45]: "03"
+      - heading "识别结果" [level=2] [ref=e46]
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - term [ref=e53]: 识别实例
+          - definition [ref=e54]: 5 个
+        - generic [ref=e55]:
+          - term [ref=e56]: 推理耗时
+          - definition [ref=e57]: 63.3 毫秒
+        - generic [ref=e58]:
+          - term [ref=e59]: 图像尺寸
+          - definition [ref=e60]: 810 × 1080
+      - paragraph [ref=e61]: 相机编号：front_rgb · 采集时间戳：1792735200123456789
+      - paragraph [ref=e62]: 请求编号：dc3fe338-0847-4512-9fb1-062a3fa41a8a
+      - paragraph [ref=e63]: 模型版本：yolo26n-seg.pt@sha256:361fbfabab28
+      - table [ref=e65]:
+        - rowgroup [ref=e66]:
+          - row [ref=e67]:
+            - columnheader "类别" [ref=e68]
+            - columnheader "置信度" [ref=e69]
+            - columnheader "边框（像素）" [ref=e70]
+            - columnheader "中心点（像素）" [ref=e71]
+            - columnheader "面积（像素）" [ref=e72]
+            - columnheader "地面坐标" [ref=e73]
+        - rowgroup [ref=e74]:
+          - row [ref=e75]:
+            - cell "bus" [ref=e76]
+            - cell "87.0%" [ref=e77]
+            - cell "9.4, 227.6, 806.9, 729.6" [ref=e78]
+            - cell "436.5, 441.1" [ref=e79]
+            - cell "262075" [ref=e80]
+            - cell "未标定" [ref=e81]
+          - row [ref=e82]:
+            - cell "person" [ref=e83]
+            - cell "85.9%" [ref=e84]
+            - cell "51.0, 395.0, 244.1, 905.4" [ref=e85]
+            - cell "130.9, 645.4" [ref=e86]
+            - cell "50214" [ref=e87]
+            - cell "未标定" [ref=e88]
+          - row [ref=e89]:
+            - cell "person" [ref=e90]
+            - cell "83.5%" [ref=e91]
+            - cell "220.9, 406.5, 345.0, 858.0" [ref=e92]
+            - cell "278.8, 619.6" [ref=e93]
+            - cell "31223" [ref=e94]
+            - cell "未标定" [ref=e95]
+          - row [ref=e96]:
+            - cell "person" [ref=e97]
+            - cell "81.4%" [ref=e98]
+            - cell "668.3, 402.9, 809.7, 882.1" [ref=e99]
+            - cell "767.9, 671.7" [ref=e100]
+            - cell "20765" [ref=e101]
+            - cell "未标定" [ref=e102]
+          - row [ref=e103]:
+            - cell "person" [ref=e104]
+            - cell "57.3%" [ref=e105]
+            - cell "0.0, 557.0, 77.6, 868.4" [ref=e106]
+            - cell "25.3, 725.2" [ref=e107]
+            - cell "11845" [ref=e108]
+            - cell "未标定" [ref=e109]
+      - paragraph [ref=e110]: 类别名称来自当前模型。坐标基于方向校正后的原图，中心点和面积由分割掩膜计算。
+    - group [ref=e111]:
+      - generic "查看原始 JSON 响应" [ref=e112] [cursor=pointer]
+  - generic [ref=e48]: 本地视觉测试 · 地面坐标与执行机构控制尚未接入

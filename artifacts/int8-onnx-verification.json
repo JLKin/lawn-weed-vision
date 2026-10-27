@@ -1,0 +1,21 @@
+{
+  "quantize_nodes": 106,
+  "sample_images": 2,
+  "output_shapes": [
+    [
+      1,
+      25200,
+      117
+    ],
+    [
+      1,
+      32,
+      160,
+      160
+    ]
+  ],
+  "finite": true,
+  "provider": "CPUExecutionProvider",
+  "task_accuracy_validated": false,
+  "tensorrt_validated": false
+}

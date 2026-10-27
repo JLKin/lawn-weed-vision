@@ -1,0 +1,7 @@
+{
+  "status": "ok",
+  "model_ready": true,
+  "model_version": "yolov5n-seg.pt@sha256:1ee00e5e14e3",
+  "model_path": "yolov5n-seg.pt",
+  "detail": null
+}

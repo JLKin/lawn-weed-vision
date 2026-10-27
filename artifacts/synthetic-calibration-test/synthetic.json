@@ -1,0 +1,16 @@
+{
+  "calibration_id": "synthetic",
+  "camera_id": "front_rgb",
+  "radar_id": "radar0",
+  "radar_frame_id": "radar_frame",
+  "synthetic": true,
+  "image_space": "raw",
+  "image_width": 810,
+  "image_height": 1080,
+  "camera_matrix": [[600, 0, 405], [0, 600, 540], [0, 0, 1]],
+  "distortion": [0, 0, 0, 0, 0],
+  "T_base_from_camera": [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, -1, 1], [0, 0, 0, 1]],
+  "T_base_from_radar": [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]],
+  "ground_plane": {"normal_base": [0, 0, 1], "offset_m": 0},
+  "max_distance_m": 10.0
+}

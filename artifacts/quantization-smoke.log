@@ -1,0 +1,4 @@
+WARNING:root:Please consider to run pre-processing before quantization. Refer to example: https://github.com/microsoft/onnxruntime-inference-examples/blob/main/quantization/image_classification/cpu/ReadMe.md 
+WARNING:root:Please consider pre-processing before quantization. See https://github.com/microsoft/onnxruntime-inference-examples/blob/main/quantization/image_classification/cpu/ReadMe.md 
+Q/DQ graph ready: 106 Q nodes, 2 images.
+This is a calibration artifact, not a verified accuracy or TensorRT speed result.

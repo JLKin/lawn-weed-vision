@@ -1,0 +1,5 @@
+# Shared utilities required by the pinned original YOLOv5 repository.
+ultralytics==8.4.184
+pandas>=1.5,<3
+scipy>=1.10,<2
+seaborn>=0.13,<1

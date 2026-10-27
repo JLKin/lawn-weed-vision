@@ -1,0 +1,5 @@
+YOLOv5  af08ba1 Python-3.12.2 torch-2.14.1+cpu CPU
+
+Fusing layers... 
+YOLOv5n-seg summary: 131 layers, 1,986,637 parameters, 0 gradients, 7.1 GFLOPs
+Benchmark written: artifacts\benchmark-cpu.json; labeled task accuracy still requires separate evaluation.

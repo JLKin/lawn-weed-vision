@@ -1,0 +1,18 @@
+{
+  "system": "Windows",
+  "machine": "AMD64",
+  "python": "3.12.2",
+  "board": null,
+  "l4t": null,
+  "torch": "2.14.1+cpu",
+  "torchvision": "0.29.1+cpu",
+  "numpy": "2.5.4",
+  "cuda": null,
+  "cuda_available": false,
+  "ready_for_jetson_validation": false,
+  "errors": [
+    "Expected a Jetson running Linux ARM64 with NVIDIA L4T installed.",
+    "CUDA is unavailable; install JetPack-compatible NVIDIA PyTorch/torchvision.",
+    "JetPack TensorRT Python bindings are unavailable: No module named 'tensorrt'"
+  ]
+}

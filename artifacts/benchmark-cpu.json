@@ -1,0 +1,28 @@
+{
+  "image_manifest": [
+    {
+      "name": "bus.jpg",
+      "sha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c"
+    }
+  ],
+  "task_accuracy_validated": false,
+  "note": "Output agreement is not ground-truth accuracy; latency excludes model load.",
+  "models": [
+    {
+      "model": "models\\yolov5n-seg.pt",
+      "model_version": "yolov5n-seg.pt@sha256:1ee00e5e14e3",
+      "network": {
+        "p50_ms": 31.284149999919464,
+        "p95_ms": 32.96485500009112,
+        "samples": 2
+      },
+      "preprocessing_inference_postprocessing": {
+        "p50_ms": 65.5367499998647,
+        "p95_ms": 68.69489499990777,
+        "samples": 2
+      },
+      "peak_torch_allocated_bytes": null,
+      "mask_agreement": []
+    }
+  ]
+}

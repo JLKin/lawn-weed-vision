@@ -1,0 +1,54 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - paragraph [ref=e5]: YOLOv5 实例分割 · 模型调试
+      - heading "智能除草机模型测试" [level=1] [ref=e6]
+      - paragraph [ref=e7]: 上传一张图片，检查分割模型的运行状态与识别结果。
+    - link "接口文档 ↗" [ref=e8] [cursor=pointer]:
+      - /url: /api-docs
+  - region "模型运行状态" [ref=e9]:
+    - generic [ref=e10]:
+      - status [ref=e11]: 模型已就绪，可以开始识别
+      - paragraph [ref=e12]: 模型版本：yolov5n-seg.pt@sha256:1ee00e5e14e3
+    - button "刷新状态" [ref=e13] [cursor=pointer]
+  - paragraph [ref=e14]: 默认 YOLOv5 分割权重是通用预训练模型，仅用于部署测试。真实除草前需要使用草坪与杂草数据微调；完成标定前，地面坐标为空。
+  - generic [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]: "01"
+        - heading "上传与参数" [level=2] [ref=e19]
+      - group [ref=e21]:
+        - generic [ref=e22]: 待识别图片 必填
+        - generic [ref=e23]:
+          - button "待识别图片 必填 选择图片" [ref=e24]
+          - generic [ref=e25] [cursor=pointer]: 选择图片
+          - generic [ref=e26]: bus.jpg
+        - paragraph [ref=e27]: 支持 JPG、PNG、WebP，上传大小与像素数由服务配置限制。
+        - generic [ref=e28]: 相机编号 必填
+        - textbox "相机编号 必填" [disabled] [ref=e29]: front_rgb
+        - paragraph [ref=e30]: "以英文字母或数字开头，最多 64 个字符，可包含 _ . : -"
+        - generic [ref=e31]: 采集时间戳 选填 · 纳秒
+        - textbox "采集时间戳 选填 · 纳秒" [disabled] [ref=e32]:
+          - /placeholder: 留空表示不提供采集时间
+        - paragraph [ref=e33]: 填写采集端的非负整数时间戳，最大值为 9223372036854775807。
+        - generic [ref=e34]:
+          - checkbox "同时进行传感器映射" [checked] [ref=e35]
+          - text: 同时进行传感器映射
+        - generic [ref=e52]:
+          - generic [ref=e53]: 传感器数据（JSON）
+          - textbox "传感器数据（JSON）" [ref=e54]: "{"
+          - paragraph [ref=e55]: 此模式使用 JSON 中的相机编号与时间戳，纳秒时间戳必须加引号。填入雷达、海拔及标定编号；未提供标定时只返回识别结果和原因。示例时间为占位值，需替换为实际采集时间。
+        - button "开始识别" [active] [ref=e36] [cursor=pointer]
+      - status [ref=e37]: 传感器数据不是有效 JSON。
+    - region "上传图片预览" [ref=e38]:
+      - generic [ref=e39]:
+        - generic [ref=e40]: "02"
+        - heading "图片预览" [level=2] [ref=e41]
+      - img "待识别图片的原图预览" [ref=e51]
+      - paragraph [ref=e44]: 这里显示上传原图，识别数据将在下方展示。
+  - region [ref=e45]:
+    - generic [ref=e46]:
+      - generic [ref=e47]: "03"
+      - heading "识别结果" [level=2] [ref=e48]
+    - paragraph [ref=e49]: 尚无识别结果。完成上传后，查看目标类别、置信度和像素信息。
+  - generic [ref=e50]: 视觉与局部映射测试 · 地面位置依赖标定与当前地面条件 · 未接入执行机构控制

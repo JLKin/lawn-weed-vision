@@ -1,0 +1,2122 @@
+{
+  "source": "D:\\世界院校职业技能大赛\\模型部署\\lawn-weed-vision",
+  "snapshot_at_utc": "2026-10-27T08:39:01.761730+00:00",
+  "source_file_count": 341,
+  "source_total_bytes": 30987935,
+  "nested_git_file_count": 30,
+  "directories": [
+    ".playwright-cli",
+    ".pytest_cache",
+    "artifacts",
+    "deploy",
+    "docs",
+    "examples",
+    "models",
+    "output",
+    "scripts",
+    "tests",
+    "vendor",
+    "weed_vision",
+    ".pytest_cache/v",
+    "artifacts/synthetic-calibration-test",
+    "deploy/jetson",
+    "docs/superpowers",
+    "output/playwright",
+    "scripts/__pycache__",
+    "tests/__pycache__",
+    "vendor/yolov5",
+    "weed_vision/web",
+    "weed_vision/__pycache__",
+    ".pytest_cache/v/cache",
+    "docs/superpowers/specs",
+    "vendor/yolov5/.git",
+    "vendor/yolov5/.github",
+    "vendor/yolov5/classify",
+    "vendor/yolov5/data",
+    "vendor/yolov5/models",
+    "vendor/yolov5/segment",
+    "vendor/yolov5/tests",
+    "vendor/yolov5/utils",
+    "vendor/yolov5/__pycache__",
+    "vendor/yolov5/.git/hooks",
+    "vendor/yolov5/.git/info",
+    "vendor/yolov5/.git/logs",
+    "vendor/yolov5/.git/objects",
+    "vendor/yolov5/.git/refs",
+    "vendor/yolov5/.github/ISSUE_TEMPLATE",
+    "vendor/yolov5/.github/workflows",
+    "vendor/yolov5/data/hyps",
+    "vendor/yolov5/data/images",
+    "vendor/yolov5/data/scripts",
+    "vendor/yolov5/models/hub",
+    "vendor/yolov5/models/segment",
+    "vendor/yolov5/models/__pycache__",
+    "vendor/yolov5/utils/docker",
+    "vendor/yolov5/utils/flask_rest_api",
+    "vendor/yolov5/utils/loggers",
+    "vendor/yolov5/utils/segment",
+    "vendor/yolov5/utils/__pycache__",
+    "vendor/yolov5/.git/logs/refs",
+    "vendor/yolov5/.git/objects/info",
+    "vendor/yolov5/.git/objects/pack",
+    "vendor/yolov5/.git/refs/heads",
+    "vendor/yolov5/.git/refs/remotes",
+    "vendor/yolov5/.git/refs/tags",
+    "vendor/yolov5/.git/logs/refs/heads",
+    "vendor/yolov5/.git/logs/refs/remotes",
+    "vendor/yolov5/.git/logs/refs/remotes/origin",
+    "vendor/yolov5/.git/refs/remotes/origin",
+    "vendor/yolov5/utils/loggers/clearml",
+    "vendor/yolov5/utils/loggers/comet",
+    "vendor/yolov5/utils/loggers/wandb",
+    "vendor/yolov5/utils/segment/__pycache__"
+  ],
+  "files": [
+    {
+      "path": ".env.example",
+      "bytes": 696,
+      "sha256": "20549b4ebc511d965774e1c7d832bd6c8d9e35cc1f7d990e7f4ff9948cbcfa4f",
+      "storage": ".env.example"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 154,
+      "sha256": "2f3d951b6da10f887c19f0d064e2710bf29f744d354ad1182e75765d42ab3aba",
+      "storage": ".gitignore"
+    },
+    {
+      "path": ".playwright-cli/console-2026-10-23T08-03-24-022Z.log",
+      "bytes": 149,
+      "sha256": "2389c082fdff9144f5933125caecc20060221debf25a09b8265daeebe971845b",
+      "storage": ".playwright-cli/console-2026-10-23T08-03-24-022Z.log"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-23T08-03-24-289Z.yml",
+      "bytes": 2660,
+      "sha256": "2cf8851df568d70d0130cf3a04686524b7cebedf2ed71f65ae9a213bb453d9a0",
+      "storage": ".playwright-cli/page-2026-10-23T08-03-24-289Z.yml"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-23T08-03-51-805Z.yml",
+      "bytes": 2660,
+      "sha256": "26e3f8b6485d720e181905c3d0667aeecf2d7c333fd7908c9de79b3ef2b9301b",
+      "storage": ".playwright-cli/page-2026-10-23T08-03-51-805Z.yml"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-23T08-03-52-852Z.yml",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": ".playwright-cli/page-2026-10-23T08-03-52-852Z.yml"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-23T08-03-54-934Z.yml",
+      "bytes": 2662,
+      "sha256": "4cedda155f35138a78820489da1e86a0d5a868822537ae6a5a1a02f4d4b75656",
+      "storage": ".playwright-cli/page-2026-10-23T08-03-54-934Z.yml"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-23T08-04-18-631Z.yml",
+      "bytes": 5296,
+      "sha256": "f10c63d7f1a138e215f150a24c6b1aef1d6bc6690c8a54092af91f3f54f1a77b",
+      "storage": ".playwright-cli/page-2026-10-23T08-04-18-631Z.yml"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-23T08-06-05-030Z.yml",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": ".playwright-cli/page-2026-10-23T08-06-05-030Z.yml"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-23T08-06-07-068Z.yml",
+      "bytes": 2735,
+      "sha256": "80c9f6880496cf25d62909cf2300bcc095967b4c9aaf2bbaa4c3a1247e4430f4",
+      "storage": ".playwright-cli/page-2026-10-23T08-06-07-068Z.yml"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-23T08-06-14-098Z.yml",
+      "bytes": 2719,
+      "sha256": "1d99c7c84160f7c547dc2906235e92dfeea29c6f2fa061f0da1e4f00c0782cfa",
+      "storage": ".playwright-cli/page-2026-10-23T08-06-14-098Z.yml"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-27T06-43-26-227Z.yml",
+      "bytes": 2857,
+      "sha256": "276746c60c1559ff7ddbda2dcb137161b6c6d6016827aadf43decbb8982790d9",
+      "storage": ".playwright-cli/page-2026-10-27T06-43-26-227Z.yml"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-27T06-45-59-123Z.yml",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": ".playwright-cli/page-2026-10-27T06-45-59-123Z.yml"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-27T06-46-01-195Z.yml",
+      "bytes": 2859,
+      "sha256": "5ca47cfededacccd9d9cfee98dd2df3b349f6b582d1652823923d8c844005ce4",
+      "storage": ".playwright-cli/page-2026-10-27T06-46-01-195Z.yml"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-27T06-46-22-047Z.yml",
+      "bytes": 3289,
+      "sha256": "87b371f21ab8ef5c40c1daf5faf0bdbc7dc47defc6fc0da415a5b3e7739018df",
+      "storage": ".playwright-cli/page-2026-10-27T06-46-22-047Z.yml"
+    },
+    {
+      "path": ".pytest_cache/.gitignore",
+      "bytes": 37,
+      "sha256": "3ed731b65d06150c138e2dadb0be0697550888a6b47eb8c45ecc9adba8b8e9bd",
+      "storage": ".pytest_cache/.gitignore"
+    },
+    {
+      "path": ".pytest_cache/CACHEDIR.TAG",
+      "bytes": 191,
+      "sha256": "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4",
+      "storage": ".pytest_cache/CACHEDIR.TAG"
+    },
+    {
+      "path": ".pytest_cache/README.md",
+      "bytes": 302,
+      "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad",
+      "storage": ".pytest_cache/README.md"
+    },
+    {
+      "path": ".pytest_cache/v/cache/nodeids",
+      "bytes": 7208,
+      "sha256": "6e8e5f47a059f8ff5a25eaa00c5079411787b0f9856db8f0c58a45c40dfca1c8",
+      "storage": ".pytest_cache/v/cache/nodeids"
+    },
+    {
+      "path": "artifacts/benchmark-cpu.json",
+      "bytes": 782,
+      "sha256": "884b6af185b806df02cc69ef466e550b2748086b04fc7a0954ef8d9f0028d094",
+      "storage": "artifacts/benchmark-cpu.json"
+    },
+    {
+      "path": "artifacts/benchmark-cpu.log",
+      "bytes": 261,
+      "sha256": "46d45c3dde7e99aba259bb61179c3cbd71acc21afec960d7a0861cfd07f87533",
+      "storage": "artifacts/benchmark-cpu.log"
+    },
+    {
+      "path": "artifacts/benchmark-regression.json",
+      "bytes": 1742,
+      "sha256": "e79dee48400f2d9a20e8a00da64276751c58854b984879af1f3bb45619c7a3ea",
+      "storage": "artifacts/benchmark-regression.json"
+    },
+    {
+      "path": "artifacts/benchmark-regression.log",
+      "bytes": 421,
+      "sha256": "5df7d727dc75f01aa7e2c6cff614789eb5270d4b28565ec84d1f1e5725cc623c",
+      "storage": "artifacts/benchmark-regression.log"
+    },
+    {
+      "path": "artifacts/current-dependencies.txt",
+      "bytes": 1201,
+      "sha256": "a8ef3629132cd85fe25432e97635b406d841311d0baca0061ba58d270ef9221d",
+      "storage": "artifacts/current-dependencies.txt"
+    },
+    {
+      "path": "artifacts/http-client-response.json",
+      "bytes": 168331,
+      "sha256": "ccf298f4882f190026a300f4e6669c82f439fe94caeef243d8e6739fb3554fee",
+      "storage": "artifacts/http-client-response.json"
+    },
+    {
+      "path": "artifacts/http-server.log",
+      "bytes": 460,
+      "sha256": "0ba58dc78b8ebf197a39f11779552be71bf64f74b03fb066504e37fd0894617c",
+      "storage": "artifacts/http-server.log"
+    },
+    {
+      "path": "artifacts/http-verification.json",
+      "bytes": 264,
+      "sha256": "dbba235dc6cf5920cc45f20a039ab3a87496209971b039a70db5fe76199c815b",
+      "storage": "artifacts/http-verification.json"
+    },
+    {
+      "path": "artifacts/int8-onnx-verification.json",
+      "bytes": 315,
+      "sha256": "40360799bfe60f1e91dfb7977ef11ab009fafd634334e16d21139d73541b3611",
+      "storage": "artifacts/int8-onnx-verification.json"
+    },
+    {
+      "path": "artifacts/invalid-image.png",
+      "bytes": 12,
+      "sha256": "5464533c9647b67eb320c40ccc5959537c09102ae75388f6a7675b433e745c9d",
+      "storage": "artifacts/invalid-image.png"
+    },
+    {
+      "path": "artifacts/jetson-preflight-on-windows.json",
+      "bytes": 536,
+      "sha256": "9bb4d03df4924f3d9c4679a284d6cf7d769f8173fe4f12cca182b68d8b300ae8",
+      "storage": "artifacts/jetson-preflight-on-windows.json"
+    },
+    {
+      "path": "artifacts/mapping-http-response.json",
+      "bytes": 159320,
+      "sha256": "963fd703d314388e3030afe24a2b226cd3726b5309605b7dbd51b895482251a0",
+      "storage": "artifacts/mapping-http-response.json"
+    },
+    {
+      "path": "artifacts/mapping-synthetic-response.json",
+      "bytes": 159979,
+      "sha256": "d17735edc1ee6f6c6e0f1802f629b93858952fa8bc40e05c1668d9bcbab747d2",
+      "storage": "artifacts/mapping-synthetic-response.json"
+    },
+    {
+      "path": "artifacts/onnx-export.log",
+      "bytes": 1392,
+      "sha256": "cc2da598705a02002a2245e0b1ce3fb1ba3791648aabe14760c11fa7a7e1b4a2",
+      "storage": "artifacts/onnx-export.log"
+    },
+    {
+      "path": "artifacts/openapi.json",
+      "bytes": 10723,
+      "sha256": "e078599f61762e3f0f2ca57672b216cb5f18a2b1ee408d327673142ba82f148b",
+      "storage": "artifacts/openapi.json"
+    },
+    {
+      "path": "artifacts/quantization-smoke.log",
+      "bytes": 524,
+      "sha256": "69581ef6dd34c870a0df9080c51e2fdf345d67971279da0b082fc500f9b0e0f4",
+      "storage": "artifacts/quantization-smoke.log"
+    },
+    {
+      "path": "artifacts/server-v03.pid",
+      "bytes": 7,
+      "sha256": "bc17252b4480467889e42d900cabd3af3c4dc25093a653032c49ac50a94452e3",
+      "storage": "artifacts/server-v03.pid"
+    },
+    {
+      "path": "artifacts/server-v03.stderr.log",
+      "bytes": 202,
+      "sha256": "a536c7da7217474341368367078068508beceaebf711a3f4c57057ddc7c06d30",
+      "storage": "artifacts/server-v03.stderr.log"
+    },
+    {
+      "path": "artifacts/server-v03.stdout.log",
+      "bytes": 1471,
+      "sha256": "714b7db9cd33f6431d6328f2ebb09906cba81ca7015ae8e5cebf5132787e90de",
+      "storage": "artifacts/server-v03.stdout.log"
+    },
+    {
+      "path": "artifacts/server-yolov5.pid",
+      "bytes": 7,
+      "sha256": "c001b77ad3d76e401cb2e7ee961c8df2d60cb52214ec81dc454dd5cd2aa9f573",
+      "storage": "artifacts/server-yolov5.pid"
+    },
+    {
+      "path": "artifacts/server-yolov5.stderr.log",
+      "bytes": 202,
+      "sha256": "95f8bd9732a669248adcbf8b9fad754ecaf4ec3c32f2855f370c25ac2ba9f93b",
+      "storage": "artifacts/server-yolov5.stderr.log"
+    },
+    {
+      "path": "artifacts/server-yolov5.stdout.log",
+      "bytes": 675,
+      "sha256": "09127f5236985f552a4795623a8fee994c7c46f0f91a2a2d4bc61d33d463c662",
+      "storage": "artifacts/server-yolov5.stdout.log"
+    },
+    {
+      "path": "artifacts/server-zh.pid",
+      "bytes": 7,
+      "sha256": "cc57b5c63cb48d4cd31ed0eb284083b73da0c7b732cddb36b24194886bbc79b3",
+      "storage": "artifacts/server-zh.pid"
+    },
+    {
+      "path": "artifacts/server-zh.stderr.log",
+      "bytes": 202,
+      "sha256": "70663ebbc2157b3afaed2b0a3d861d75ede43289a8bdc3ab10cd07c413cf2738",
+      "storage": "artifacts/server-zh.stderr.log"
+    },
+    {
+      "path": "artifacts/server-zh.stdout.log",
+      "bytes": 1769,
+      "sha256": "446159b7856cd8b8f7a85aece7b3a5ac6cd4564561c71ae02c453278c5f726a7",
+      "storage": "artifacts/server-zh.stdout.log"
+    },
+    {
+      "path": "artifacts/smoke-response.json",
+      "bytes": 168328,
+      "sha256": "3f535366b5b6d89200dbf5b6f7e13ab84b9d2f7834906e4b6955ea97583eeaf6",
+      "storage": "artifacts/smoke-response.json"
+    },
+    {
+      "path": "artifacts/synthetic-calibration-test/synthetic.json",
+      "bytes": 576,
+      "sha256": "f894fc4fb79354f439def45f7b4efcd35bb1de482013562871aceac550120435",
+      "storage": "artifacts/synthetic-calibration-test/synthetic.json"
+    },
+    {
+      "path": "artifacts/yolov5-http-health.json",
+      "bytes": 158,
+      "sha256": "ea8a5ff0d5afe99752daa273bad6c0b175d0f0ae6579df4c398147be11cd3d85",
+      "storage": "artifacts/yolov5-http-health.json"
+    },
+    {
+      "path": "artifacts/yolov5-http-response.json",
+      "bytes": 157731,
+      "sha256": "7db37f341dd5a1192dc7105f6ae72bc8e9c8ee5d6412ac3f8e090c707f206661",
+      "storage": "artifacts/yolov5-http-response.json"
+    },
+    {
+      "path": "artifacts/yolov5-smoke-response.json",
+      "bytes": 158195,
+      "sha256": "b5f0e886a3ca3b5585ade8619d159fdc90d948c1913fc5bf1080aaa41aeddf04",
+      "storage": "artifacts/yolov5-smoke-response.json"
+    },
+    {
+      "path": "artifacts/yolov5n-seg.fp32.onnx",
+      "bytes": 8398348,
+      "sha256": "252263a54a715c21959f7d53b2da41087e4a7d76fdf07638963cfff7bbd18848",
+      "storage": "artifacts/yolov5n-seg.fp32.onnx"
+    },
+    {
+      "path": "artifacts/yolov5n-seg.fp32.onnx.json",
+      "bytes": 1731,
+      "sha256": "15d3ca507b71555e371ed3729d9b6f67e073557db8194fc97f7bbb16681286b5",
+      "storage": "artifacts/yolov5n-seg.fp32.onnx.json"
+    },
+    {
+      "path": "artifacts/yolov5n-seg.int8-smoke.onnx",
+      "bytes": 3284814,
+      "sha256": "e5bcc4c034140b3c47cc6a7e3d09ab613b6119fd18a4fc31b997a8d400efea4b",
+      "storage": "artifacts/yolov5n-seg.int8-smoke.onnx"
+    },
+    {
+      "path": "artifacts/yolov5n-seg.int8-smoke.onnx.json",
+      "bytes": 4767,
+      "sha256": "b3840518021d7ef7dd59f6e98b73773afe2f1cd6b533178b1fb5825223535ad5",
+      "storage": "artifacts/yolov5n-seg.int8-smoke.onnx.json"
+    },
+    {
+      "path": "deploy/jetson/.env.example",
+      "bytes": 480,
+      "sha256": "de120e5c7450ef4a68b50ea0091437e4dcac21eabedc50a051d86e99b5673c38",
+      "storage": "deploy/jetson/.env.example"
+    },
+    {
+      "path": "deploy/jetson/lawn-weed-vision.service.example",
+      "bytes": 516,
+      "sha256": "125d2105022102ca9b5662815b3768c4f42161e45b94cac7ac0ac857f4a5b82a",
+      "storage": "deploy/jetson/lawn-weed-vision.service.example"
+    },
+    {
+      "path": "deploy/jetson/requirements-export.txt",
+      "bytes": 149,
+      "sha256": "88dc07facb563869df15e8871963c370c0d825dfd31f1d3c21cbe48b4df546e5",
+      "storage": "deploy/jetson/requirements-export.txt"
+    },
+    {
+      "path": "deploy/jetson/run.sh",
+      "bytes": 372,
+      "sha256": "3f9914923c92b27c0e1450b5309159489fd1d7c8c1ab0ed6e0581ecb22163859",
+      "storage": "deploy/jetson/run.sh"
+    },
+    {
+      "path": "docs/implementation-plan.md",
+      "bytes": 941,
+      "sha256": "a272e6275553863377b16326110a3d778ea74d09a0a363f8b94ee935d2e9e4f5",
+      "storage": "docs/implementation-plan.md"
+    },
+    {
+      "path": "docs/int8-and-mapping.md",
+      "bytes": 11481,
+      "sha256": "2b316c425d808fc6f8704e69dcda6df081312ddaddad09fd32295a8bec11b7b5",
+      "storage": "docs/int8-and-mapping.md"
+    },
+    {
+      "path": "docs/jetson-migration.md",
+      "bytes": 9517,
+      "sha256": "1363c1bfa93f7b5d152ff6d2938ad71d2d0637c9c9b6eb679a1f354621fd8131",
+      "storage": "docs/jetson-migration.md"
+    },
+    {
+      "path": "docs/local-verification.md",
+      "bytes": 3800,
+      "sha256": "f7b7672461065dfbda040ee2b1c73bf060816cf9bf521f8d06aa0fbaeec76998",
+      "storage": "docs/local-verification.md"
+    },
+    {
+      "path": "docs/superpowers/specs/2026-10-27-int8-sensor-mapping-design.md",
+      "bytes": 14684,
+      "sha256": "4527d70644e350c9269418523e49367e497fc528216bcb5ad015d08f927b606a",
+      "storage": "docs/superpowers/specs/2026-10-27-int8-sensor-mapping-design.md"
+    },
+    {
+      "path": "docs/v03-verification.md",
+      "bytes": 3104,
+      "sha256": "1ee7e9f040e4d7b0cbd16d1b19ce3206e3b6c5797e58e78b6fae3c69c9f78b88",
+      "storage": "docs/v03-verification.md"
+    },
+    {
+      "path": "docs/yolov5-verification.md",
+      "bytes": 3335,
+      "sha256": "0863cf83eb6efe4f93ef69b3cffec48212a9009857a191c6e359bf880747846f",
+      "storage": "docs/yolov5-verification.md"
+    },
+    {
+      "path": "examples/deployment-smoke-response.json",
+      "bytes": 157733,
+      "sha256": "a149c8bb6feef9aab74d071bfaf90cdfa09f6065b6232b5bfda060b42356f7de",
+      "storage": "examples/deployment-smoke-response.json"
+    },
+    {
+      "path": "examples/mapping-context.json",
+      "bytes": 658,
+      "sha256": "b8bd5eab8db2be5ecd211c6760e3a79fb96ca08f46c5bbafbdfa86201323aa43",
+      "storage": "examples/mapping-context.json"
+    },
+    {
+      "path": "examples/mapping-response-uncalibrated.json",
+      "bytes": 159320,
+      "sha256": "963fd703d314388e3030afe24a2b226cd3726b5309605b7dbd51b895482251a0",
+      "storage": "examples/mapping-response-uncalibrated.json"
+    },
+    {
+      "path": "examples/synthetic-calibration.json",
+      "bytes": 560,
+      "sha256": "d77c14cbbfa570d5f8dc1f82cc60059c71837dbc6439f6536fbbc4cfc1983c60",
+      "storage": "examples/synthetic-calibration.json"
+    },
+    {
+      "path": "models/yolov5n-seg.pt",
+      "bytes": 4313489,
+      "sha256": "1ee00e5e14e3863898c5446c62734776759e29be08fd1c174774992f7aaa9985",
+      "storage": "models/yolov5n-seg.pt"
+    },
+    {
+      "path": "output/playwright/chinese-test-desktop.png",
+      "bytes": 387064,
+      "sha256": "a39aabb5fdff7364d0ed0917cffa1b871949d88dcd44e8265411fdfc4aef9265",
+      "storage": "output/playwright/chinese-test-desktop.png"
+    },
+    {
+      "path": "output/playwright/chinese-test-mobile.png",
+      "bytes": 318782,
+      "sha256": "6c31b4755e02a480c76c54fe002f2f5bac07a88ae7ed0e4d1d8ffe9603f181f0",
+      "storage": "output/playwright/chinese-test-mobile.png"
+    },
+    {
+      "path": "output/playwright/mapping-desktop.png",
+      "bytes": 805737,
+      "sha256": "1198ec7199770158f6df82d860b4aef7b52637756206c66eed70b61f82608c97",
+      "storage": "output/playwright/mapping-desktop.png"
+    },
+    {
+      "path": "output/playwright/mapping-mobile.png",
+      "bytes": 660742,
+      "sha256": "1cd466126997eb61b54a13b241254b36f36bd70405e6b3a3716d4dc23a38e58f",
+      "storage": "output/playwright/mapping-mobile.png"
+    },
+    {
+      "path": "output/playwright/mapping-synthetic-desktop.png",
+      "bytes": 802730,
+      "sha256": "8b7db937350611846e0a5edc149d1bdb2016f034f466343a87fc3645d45cae58",
+      "storage": "output/playwright/mapping-synthetic-desktop.png"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 634,
+      "sha256": "abf4f5842206c451e3a7797500eabb5e2083d75d8af36302e345139a2503c6fd",
+      "storage": "pyproject.toml"
+    },
+    {
+      "path": "README.md",
+      "bytes": 14270,
+      "sha256": "d92cd98ec9c0b51b5b9af03dca62f4cb5c44d3efb1616c613bf3d0e05eb82f25",
+      "storage": "README.md"
+    },
+    {
+      "path": "requirements-api.txt",
+      "bytes": 136,
+      "sha256": "fa0319c23e92885b57b26fe767ad4f5420f7dabbd46f9b5522648e3c0949dbe7",
+      "storage": "requirements-api.txt"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "bytes": 36,
+      "sha256": "5e80794bcc6d2549958645e311fe2e150307ca42d1a05b154959c044697327ad",
+      "storage": "requirements-dev.txt"
+    },
+    {
+      "path": "requirements-lock-windows-py312.txt",
+      "bytes": 1446,
+      "sha256": "f836f9084df5b947af3a85adc4a958b33bb71c81dd8b021c4273e48c4b046bda",
+      "storage": "requirements-lock-windows-py312.txt"
+    },
+    {
+      "path": "requirements-model.txt",
+      "bytes": 138,
+      "sha256": "7a2e78f3ba93c21e6ef736c3aecfe44c16804862292524504ff8b9a71e0628c6",
+      "storage": "requirements-model.txt"
+    },
+    {
+      "path": "requirements-quantization.txt",
+      "bytes": 120,
+      "sha256": "490c980331fc01c52e69dac779826ef118239ada4374494711b9519b07b9f32a",
+      "storage": "requirements-quantization.txt"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 50,
+      "sha256": "1466386c80bf5a2a62093ca05d1dba2f8a5a570252ae3f6758960dfc234d91af",
+      "storage": "requirements.txt"
+    },
+    {
+      "path": "scripts/__pycache__/benchmark_models.cpython-312.pyc",
+      "bytes": 12424,
+      "sha256": "ba8b3d3ecc8ccb003c074fc077c29b40fdbd67804b11029759dc3bb7717f298e",
+      "storage": "scripts/__pycache__/benchmark_models.cpython-312.pyc"
+    },
+    {
+      "path": "scripts/__pycache__/build_tensorrt.cpython-312.pyc",
+      "bytes": 7904,
+      "sha256": "b40d43a4aee1f813fc70ca423732b7fc2de99d2c055d1cf547f7d8b8db091c0c",
+      "storage": "scripts/__pycache__/build_tensorrt.cpython-312.pyc"
+    },
+    {
+      "path": "scripts/__pycache__/check_jetson.cpython-312.pyc",
+      "bytes": 6101,
+      "sha256": "c356a7ff7d0d9895aa882d5b7777b1dc0856fc6c8137145672369204d8735300",
+      "storage": "scripts/__pycache__/check_jetson.cpython-312.pyc"
+    },
+    {
+      "path": "scripts/__pycache__/client.cpython-312.pyc",
+      "bytes": 5078,
+      "sha256": "069d280734742b39f2bc304961411322f5d07ea84c0195201a4c2a233c8f5be6",
+      "storage": "scripts/__pycache__/client.cpython-312.pyc"
+    },
+    {
+      "path": "scripts/__pycache__/export_yolov5_engine.cpython-312.pyc",
+      "bytes": 5671,
+      "sha256": "fcc193f68ffcd2c0b440af197c093cc24673d421d79f8295f91fff230def7f29",
+      "storage": "scripts/__pycache__/export_yolov5_engine.cpython-312.pyc"
+    },
+    {
+      "path": "scripts/__pycache__/export_yolov5_onnx.cpython-312.pyc",
+      "bytes": 4761,
+      "sha256": "c3543ba6146c5292727678873558d074e98798f87bd090fb5f219dc827e3e418",
+      "storage": "scripts/__pycache__/export_yolov5_onnx.cpython-312.pyc"
+    },
+    {
+      "path": "scripts/__pycache__/mapping_client.cpython-312.pyc",
+      "bytes": 2519,
+      "sha256": "0f94f7e048bce1d3a2fa08255cdd7eed2383203e2df496be587bddc6ccbaf9fd",
+      "storage": "scripts/__pycache__/mapping_client.cpython-312.pyc"
+    },
+    {
+      "path": "scripts/__pycache__/prepare_yolov5.cpython-312.pyc",
+      "bytes": 4906,
+      "sha256": "da5fcd60d578ef659f17e842bea76e74d4ff01812f83dff8d22da1a3a8b17489",
+      "storage": "scripts/__pycache__/prepare_yolov5.cpython-312.pyc"
+    },
+    {
+      "path": "scripts/__pycache__/quantize_yolov5.cpython-312.pyc",
+      "bytes": 1791,
+      "sha256": "3b7b9f3d4d9f2cb24be5969e2b7fa535be28bf3710835a76270a51f1caeab3b3",
+      "storage": "scripts/__pycache__/quantize_yolov5.cpython-312.pyc"
+    },
+    {
+      "path": "scripts/__pycache__/smoke_test.cpython-312.pyc",
+      "bytes": 3674,
+      "sha256": "88064c099a183d6e3e8685f37ee632ab3da6d633d83dffab07f43a7b70130e1b",
+      "storage": "scripts/__pycache__/smoke_test.cpython-312.pyc"
+    },
+    {
+      "path": "scripts/benchmark_models.py",
+      "bytes": 7190,
+      "sha256": "b88947d2d6a42ae424fefb830dbe6468e56e341534b377bf8643510bdc6a4189",
+      "storage": "scripts/benchmark_models.py"
+    },
+    {
+      "path": "scripts/build_tensorrt.py",
+      "bytes": 4638,
+      "sha256": "80e73f4e6cd3349877d3cd8132c3810c387f0252eb6685572f84f2f68850007f",
+      "storage": "scripts/build_tensorrt.py"
+    },
+    {
+      "path": "scripts/check_jetson.py",
+      "bytes": 3605,
+      "sha256": "7adff9b7d7c42b8e91c0b87a97a02b6bb179fc79dbd0a11b9ae8da6cd0b48c9a",
+      "storage": "scripts/check_jetson.py"
+    },
+    {
+      "path": "scripts/client.py",
+      "bytes": 3004,
+      "sha256": "110ac47bcb9d70f6ba257270870f3d17443f57fe8749cca63b67c877cd8b0edd",
+      "storage": "scripts/client.py"
+    },
+    {
+      "path": "scripts/export_yolov5_engine.py",
+      "bytes": 3800,
+      "sha256": "75d2877bd7b415cbde1fe20c7ee79c8374d463aa4f5eb5e3228668ea8347368e",
+      "storage": "scripts/export_yolov5_engine.py"
+    },
+    {
+      "path": "scripts/export_yolov5_onnx.py",
+      "bytes": 2791,
+      "sha256": "58ea9afd37c6845335533a9a855d4164ce89f04f1035260647689ee6f6a61221",
+      "storage": "scripts/export_yolov5_onnx.py"
+    },
+    {
+      "path": "scripts/mapping_client.py",
+      "bytes": 1250,
+      "sha256": "930e1d875fb2a9b62cb10fa33f9024d9facef4e7904b34f0ceb37fc4ef5144b2",
+      "storage": "scripts/mapping_client.py"
+    },
+    {
+      "path": "scripts/prepare_yolov5.py",
+      "bytes": 2682,
+      "sha256": "4e7df6290b6634803018f7593fdcae23c9110ce174f4a714e5f47fdb49ac4f1e",
+      "storage": "scripts/prepare_yolov5.py"
+    },
+    {
+      "path": "scripts/quantize_yolov5.py",
+      "bytes": 974,
+      "sha256": "9e0199d7a9ab1859a0fcc0d84ab5c828d5cd87912d1f61650021dfab3750d4e6",
+      "storage": "scripts/quantize_yolov5.py"
+    },
+    {
+      "path": "scripts/smoke_test.py",
+      "bytes": 2319,
+      "sha256": "394acd99acb5cb8a15626ab26b0a1ea8d702e6e98cb3622673ebb35061d98d07",
+      "storage": "scripts/smoke_test.py"
+    },
+    {
+      "path": "tests/__pycache__/conftest.cpython-312-pytest-9.1.1.pyc",
+      "bytes": 3505,
+      "sha256": "c2ffc783f4d22c8f52947d83d7daf457f8fdeaef9ec9891bb250ba8874e7889d",
+      "storage": "tests/__pycache__/conftest.cpython-312-pytest-9.1.1.pyc"
+    },
+    {
+      "path": "tests/__pycache__/conftest.cpython-312.pyc",
+      "bytes": 3317,
+      "sha256": "6bef0f92a3ce658615152ddc3abefaccb17023b28a419c80910710bf9382ca54",
+      "storage": "tests/__pycache__/conftest.cpython-312.pyc"
+    },
+    {
+      "path": "tests/__pycache__/test_api.cpython-312-pytest-9.1.1.pyc",
+      "bytes": 43002,
+      "sha256": "65108dc141fd886c87f3eebdf256a795d2420c8fea749fca97316ff8cf8de081",
+      "storage": "tests/__pycache__/test_api.cpython-312-pytest-9.1.1.pyc"
+    },
+    {
+      "path": "tests/__pycache__/test_api.cpython-312.pyc",
+      "bytes": 16359,
+      "sha256": "7d998a9f8b52e9bb835f26034826561479762065366901bcd2c6ff0c6a0434a6",
+      "storage": "tests/__pycache__/test_api.cpython-312.pyc"
+    },
+    {
+      "path": "tests/__pycache__/test_benchmark.cpython-312-pytest-9.1.1.pyc",
+      "bytes": 4428,
+      "sha256": "5834fe49d9c048f1c25f7f8e2e720265fe7635a95b4379c4a5fb46e88d9fd24b",
+      "storage": "tests/__pycache__/test_benchmark.cpython-312-pytest-9.1.1.pyc"
+    },
+    {
+      "path": "tests/__pycache__/test_geometry.cpython-312-pytest-9.1.1.pyc",
+      "bytes": 10815,
+      "sha256": "a5dceb0c437021904f2b3683d1e2afa153df203534f30a6400c0b595e8a0421d",
+      "storage": "tests/__pycache__/test_geometry.cpython-312-pytest-9.1.1.pyc"
+    },
+    {
+      "path": "tests/__pycache__/test_mapping.cpython-312-pytest-9.1.1.pyc",
+      "bytes": 33625,
+      "sha256": "856e9c63f96e656559be4b77fa35ff090089ba8686b382681de5b781b36ecd6b",
+      "storage": "tests/__pycache__/test_mapping.cpython-312-pytest-9.1.1.pyc"
+    },
+    {
+      "path": "tests/__pycache__/test_quantization.cpython-312-pytest-9.1.1.pyc",
+      "bytes": 11687,
+      "sha256": "5fdb926d35408a22d77e1de1b644513a03d24184390707cf0c3105d180d6aba2",
+      "storage": "tests/__pycache__/test_quantization.cpython-312-pytest-9.1.1.pyc"
+    },
+    {
+      "path": "tests/__pycache__/test_yolov5_adapter.cpython-312-pytest-9.1.1.pyc",
+      "bytes": 9101,
+      "sha256": "5f74efcef6ddd5411aea0c49681440ff4187133f48e23385d8c3bc9b4a8d566e",
+      "storage": "tests/__pycache__/test_yolov5_adapter.cpython-312-pytest-9.1.1.pyc"
+    },
+    {
+      "path": "tests/conftest.py",
+      "bytes": 1823,
+      "sha256": "add495d0642543f32136ae8942f1abb25ba1c412d083f5ed33d7c2fea21b33b8",
+      "storage": "tests/conftest.py"
+    },
+    {
+      "path": "tests/test_api.py",
+      "bytes": 9410,
+      "sha256": "9dd7bf933fca7b6c39f4cb2b22440a2ec7c63d19f5365f2b53f1fed34697e84a",
+      "storage": "tests/test_api.py"
+    },
+    {
+      "path": "tests/test_benchmark.py",
+      "bytes": 824,
+      "sha256": "7c190ce2ae22913b014b1f504f83fec2dcbea7045c358c544111f953ea1e5031",
+      "storage": "tests/test_benchmark.py"
+    },
+    {
+      "path": "tests/test_geometry.py",
+      "bytes": 2328,
+      "sha256": "f4157912868ba1c07858265d9390aa1118de19d29f75395faa22deda465584b4",
+      "storage": "tests/test_geometry.py"
+    },
+    {
+      "path": "tests/test_mapping.py",
+      "bytes": 9288,
+      "sha256": "262491a00b44e5039857a28341afed49992b89b6fec21ced4ca1e97217c7eef7",
+      "storage": "tests/test_mapping.py"
+    },
+    {
+      "path": "tests/test_quantization.py",
+      "bytes": 2792,
+      "sha256": "5cacc85ccbc70a434bba3f38c9124e1bd86179ddb091ce835401b1342bd18204",
+      "storage": "tests/test_quantization.py"
+    },
+    {
+      "path": "tests/test_yolov5_adapter.py",
+      "bytes": 2752,
+      "sha256": "8ed5971df3de515f60f3e394c3c89c75bb4513937a9649c52ba7fb0c3a7befc6",
+      "storage": "tests/test_yolov5_adapter.py"
+    },
+    {
+      "path": "vendor/yolov5/.dockerignore",
+      "bytes": 3745,
+      "sha256": "6b38d3db89b4157536292cb82a6fb21c71ea1e06ee9084e75732772790fb3a6f",
+      "storage": "vendor/yolov5/.dockerignore"
+    },
+    {
+      "path": "vendor/yolov5/.git/config",
+      "bytes": 308,
+      "sha256": "606dc4ca545ff59ae10dee9f4da9a79116d994217f974d1d208e7d78134d1684",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/description",
+      "bytes": 73,
+      "sha256": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/FETCH_HEAD",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/HEAD",
+      "bytes": 23,
+      "sha256": "f6f2b945f6c411b02ba3da9c7ace88dcf71b6af65ba2e0d89aa82900042b5a10",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/hooks/applypatch-msg.sample",
+      "bytes": 478,
+      "sha256": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/hooks/commit-msg.sample",
+      "bytes": 896,
+      "sha256": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/hooks/fsmonitor-watchman.sample",
+      "bytes": 4726,
+      "sha256": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/hooks/post-update.sample",
+      "bytes": 189,
+      "sha256": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/hooks/pre-applypatch.sample",
+      "bytes": 424,
+      "sha256": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/hooks/pre-commit.sample",
+      "bytes": 1649,
+      "sha256": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/hooks/pre-merge-commit.sample",
+      "bytes": 416,
+      "sha256": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/hooks/pre-push.sample",
+      "bytes": 1374,
+      "sha256": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/hooks/pre-rebase.sample",
+      "bytes": 4898,
+      "sha256": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/hooks/pre-receive.sample",
+      "bytes": 544,
+      "sha256": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/hooks/prepare-commit-msg.sample",
+      "bytes": 1492,
+      "sha256": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/hooks/push-to-checkout.sample",
+      "bytes": 2783,
+      "sha256": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/hooks/sendemail-validate.sample",
+      "bytes": 2308,
+      "sha256": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/hooks/update.sample",
+      "bytes": 3650,
+      "sha256": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/index",
+      "bytes": 13605,
+      "sha256": "82397fc8541658575e99cb7b1b874edf9eb96f15a48c3d542910bf7abc59e7d0",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/info/exclude",
+      "bytes": 240,
+      "sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/logs/HEAD",
+      "bytes": 211,
+      "sha256": "d06cbcc9f0ecf6fbdb2ffef8d45301f09a8ef620a385d6df6784ef014be100ad",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/logs/refs/heads/master",
+      "bytes": 211,
+      "sha256": "d06cbcc9f0ecf6fbdb2ffef8d45301f09a8ef620a385d6df6784ef014be100ad",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/logs/refs/remotes/origin/HEAD",
+      "bytes": 211,
+      "sha256": "d06cbcc9f0ecf6fbdb2ffef8d45301f09a8ef620a385d6df6784ef014be100ad",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/objects/pack/pack-0512783a83d68886d60e15708bdc32edfdf90afd.idx",
+      "bytes": 5664,
+      "sha256": "efb07fa46c4513c97a9e42d28913287cd16ffb3950f61b8c49f6a5274930e18a",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/objects/pack/pack-0512783a83d68886d60e15708bdc32edfdf90afd.pack",
+      "bytes": 1007493,
+      "sha256": "8bb004b52f9e1afca7437699c485814b35ceeb4736645e7df935d7cca13ff049",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/objects/pack/pack-0512783a83d68886d60e15708bdc32edfdf90afd.rev",
+      "bytes": 708,
+      "sha256": "980db80e7038daf0d2bc18a2098e7a7ead4158c1bacfd7375add09655ba82088",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/packed-refs",
+      "bytes": 114,
+      "sha256": "9666c29c7a0c7a0063197c0f0c5a3057fd5762a6001363c410036b424c796213",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/refs/heads/master",
+      "bytes": 41,
+      "sha256": "006505e215acaefe6c5562c94a053e28fdc2596057675e4c0a3f0183df1d4934",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/refs/remotes/origin/HEAD",
+      "bytes": 32,
+      "sha256": "cdc65e67690c4c6475174e5ec662b70655246a2f3924354778835ab3be70aa76",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.git/shallow",
+      "bytes": 41,
+      "sha256": "006505e215acaefe6c5562c94a053e28fdc2596057675e4c0a3f0183df1d4934",
+      "storage": "_upload/yolov5-git-metadata.zip"
+    },
+    {
+      "path": "vendor/yolov5/.gitattributes",
+      "bytes": 72,
+      "sha256": "7beb94f03d41ac7eec26744854b19cf301b811d32c2fd8a1a3276e2e4af09c56",
+      "storage": "vendor/yolov5/.gitattributes"
+    },
+    {
+      "path": "vendor/yolov5/.github/dependabot.yml",
+      "bytes": 629,
+      "sha256": "a00c322ce00222c67e3aa659063e14e14aa55833463a99e13a050fc04b686695",
+      "storage": "vendor/yolov5/.github/dependabot.yml"
+    },
+    {
+      "path": "vendor/yolov5/.github/ISSUE_TEMPLATE/bug-report.yml",
+      "bytes": 3121,
+      "sha256": "a09bd420b55e7ae7e9feb5cfd9293d2b253a9118412cebeabb60d4729e2ebac8",
+      "storage": "vendor/yolov5/.github/ISSUE_TEMPLATE/bug-report.yml"
+    },
+    {
+      "path": "vendor/yolov5/.github/ISSUE_TEMPLATE/config.yml",
+      "bytes": 623,
+      "sha256": "bf9ea84152535745a0d3bdf272bb3c963ddb3bec44eccd9fcd9fc1f8b5405c34",
+      "storage": "vendor/yolov5/.github/ISSUE_TEMPLATE/config.yml"
+    },
+    {
+      "path": "vendor/yolov5/.github/ISSUE_TEMPLATE/feature-request.yml",
+      "bytes": 1924,
+      "sha256": "3ca9ed1d02aa498dcdebbc4b8186ca34634ffc3e907793519f947b8f2bbfbd69",
+      "storage": "vendor/yolov5/.github/ISSUE_TEMPLATE/feature-request.yml"
+    },
+    {
+      "path": "vendor/yolov5/.github/ISSUE_TEMPLATE/question.yml",
+      "bytes": 1384,
+      "sha256": "d0b093d3fcf28e5597d91f22fdc8a31938da01cfd2e31c667d4053dee842e8ff",
+      "storage": "vendor/yolov5/.github/ISSUE_TEMPLATE/question.yml"
+    },
+    {
+      "path": "vendor/yolov5/.github/workflows/ci-testing.yml",
+      "bytes": 6545,
+      "sha256": "b7a8121119663e415ef279b86cd10c19fff4f319636930ed366ed8f667b09718",
+      "storage": "vendor/yolov5/.github/workflows/ci-testing.yml"
+    },
+    {
+      "path": "vendor/yolov5/.github/workflows/cla.yml",
+      "bytes": 1070,
+      "sha256": "85a826b5c92dfcd0496a1989551d9047948f33d587aa7f3534e61ce87e49f418",
+      "storage": "vendor/yolov5/.github/workflows/cla.yml"
+    },
+    {
+      "path": "vendor/yolov5/.github/workflows/docker.yml",
+      "bytes": 2647,
+      "sha256": "b17679991383bfaed2ef7bcb19d01926ae9ba399c272d85516c69565bb8f4e1a",
+      "storage": "vendor/yolov5/.github/workflows/docker.yml"
+    },
+    {
+      "path": "vendor/yolov5/.github/workflows/format.yml",
+      "bytes": 5267,
+      "sha256": "d75adf63df4b55b8b9e1991437fc50ee89bd43ce8ade57e957cf380ac56098cb",
+      "storage": "vendor/yolov5/.github/workflows/format.yml"
+    },
+    {
+      "path": "vendor/yolov5/.github/workflows/links.yml",
+      "bytes": 3923,
+      "sha256": "049bff54f0995b39c129bd378d6d24e76041b0c88b68af13e48ce3ce66be2b20",
+      "storage": "vendor/yolov5/.github/workflows/links.yml"
+    },
+    {
+      "path": "vendor/yolov5/.github/workflows/merge-main-into-prs.yml",
+      "bytes": 3732,
+      "sha256": "3d5fb65c384b4449aa605dc7e3ded4ce30759dacbd39a188d4ab9780eaa78e87",
+      "storage": "vendor/yolov5/.github/workflows/merge-main-into-prs.yml"
+    },
+    {
+      "path": "vendor/yolov5/.github/workflows/stale.yml",
+      "bytes": 2670,
+      "sha256": "147f3fbe74002992e364d7f37e116e4046dee36fee7b22732b398bf8b7dcbfa5",
+      "storage": "vendor/yolov5/.github/workflows/stale.yml"
+    },
+    {
+      "path": "vendor/yolov5/.gitignore",
+      "bytes": 4127,
+      "sha256": "40dea07cb0eadf8c6f068ec945c0fb7c366ee547a29b3f8a473eef69e05bad5b",
+      "storage": "vendor/yolov5/.gitignore"
+    },
+    {
+      "path": "vendor/yolov5/__pycache__/export.cpython-312.pyc",
+      "bytes": 83378,
+      "sha256": "0ea532b03e5ee9299f23329e9ef17f4237df4f53f3386e8d00e5ea2e2087d5a6",
+      "storage": "vendor/yolov5/__pycache__/export.cpython-312.pyc"
+    },
+    {
+      "path": "vendor/yolov5/AGENTS.md",
+      "bytes": 7680,
+      "sha256": "9fdff207a9b6e91709d7b1ef6b9e4d0c20cb7353afe1a1cd784d477850efc57c",
+      "storage": "vendor/yolov5/AGENTS.md"
+    },
+    {
+      "path": "vendor/yolov5/benchmarks.py",
+      "bytes": 13956,
+      "sha256": "4ebc9f857adc40e577ad33619dd3d34fe5d88a83d388f043c39466533812bb08",
+      "storage": "vendor/yolov5/benchmarks.py"
+    },
+    {
+      "path": "vendor/yolov5/CITATION.cff",
+      "bytes": 410,
+      "sha256": "13c102b7527a72ad35c242024007671601e91dc9c4225c728002d7757655027d",
+      "storage": "vendor/yolov5/CITATION.cff"
+    },
+    {
+      "path": "vendor/yolov5/classify/predict.py",
+      "bytes": 12247,
+      "sha256": "76692a9df0f1176a977082ad9ef0a7fe5e28329148374c33c346abef66cc5bc2",
+      "storage": "vendor/yolov5/classify/predict.py"
+    },
+    {
+      "path": "vendor/yolov5/classify/train.py",
+      "bytes": 16926,
+      "sha256": "68920cfb296a20b320fd86351a2651f473485615a7804b0f45ccc5ce9da77367",
+      "storage": "vendor/yolov5/classify/train.py"
+    },
+    {
+      "path": "vendor/yolov5/classify/tutorial.ipynb",
+      "bytes": 98580,
+      "sha256": "400a61ed6d3429061ea87a5556970676665a871b36c46137ecfe520f9f3aee44",
+      "storage": "vendor/yolov5/classify/tutorial.ipynb"
+    },
+    {
+      "path": "vendor/yolov5/classify/val.py",
+      "bytes": 8382,
+      "sha256": "60f44df84d3eee4748b25e571432e046ea0635e6428b1ec5c800b747a1e4368d",
+      "storage": "vendor/yolov5/classify/val.py"
+    },
+    {
+      "path": "vendor/yolov5/CLAUDE.md",
+      "bytes": 9,
+      "sha256": "a54ff182c7e8acf56acfd6e4b9c3ff41e2c41a31c9b211b2deb9df75d9a478f9",
+      "storage": "vendor/yolov5/CLAUDE.md"
+    },
+    {
+      "path": "vendor/yolov5/CONTRIBUTING.md",
+      "bytes": 6001,
+      "sha256": "7b43fe015384c2c0570092adb0062308608dd281577f1a632efded2d7f248b97",
+      "storage": "vendor/yolov5/CONTRIBUTING.md"
+    },
+    {
+      "path": "vendor/yolov5/data/Argoverse.yaml",
+      "bytes": 3255,
+      "sha256": "3eab71867b0cd56edcf1f1f8577ffa2822750d30eff49315e6baf0e61c29534a",
+      "storage": "vendor/yolov5/data/Argoverse.yaml"
+    },
+    {
+      "path": "vendor/yolov5/data/coco.yaml",
+      "bytes": 2836,
+      "sha256": "2ea9a37ee16b390aa9887c8ad7621a9ca09d984b1c6f49cd30c1fdcb803e5d33",
+      "storage": "vendor/yolov5/data/coco.yaml"
+    },
+    {
+      "path": "vendor/yolov5/data/coco128-seg.yaml",
+      "bytes": 2329,
+      "sha256": "32ae74ac7f1e65a0a7982ed176c3d95cb305db27cef6ec5d9c1c45b9bd91d594",
+      "storage": "vendor/yolov5/data/coco128-seg.yaml"
+    },
+    {
+      "path": "vendor/yolov5/data/coco128.yaml",
+      "bytes": 2230,
+      "sha256": "b8480303b01a6a9acd554d169e0b028a502664e6c8d08995f081e6317daaf6c9",
+      "storage": "vendor/yolov5/data/coco128.yaml"
+    },
+    {
+      "path": "vendor/yolov5/data/GlobalWheat2020.yaml",
+      "bytes": 2189,
+      "sha256": "6e00689a6773f6be40a1c19a4b5014095fd8b5301eb3502ad6126ec5578da45e",
+      "storage": "vendor/yolov5/data/GlobalWheat2020.yaml"
+    },
+    {
+      "path": "vendor/yolov5/data/hyps/hyp.no-augmentation.yaml",
+      "bytes": 1896,
+      "sha256": "024a151d38d039ea3ea8c40c903aafe4e909806a9079c4c24c1077bf4162498d",
+      "storage": "vendor/yolov5/data/hyps/hyp.no-augmentation.yaml"
+    },
+    {
+      "path": "vendor/yolov5/data/hyps/hyp.Objects365.yaml",
+      "bytes": 1818,
+      "sha256": "c17d8837648e2677455bec68479164ac14b73673b9ff062e4206f4edc777d79a",
+      "storage": "vendor/yolov5/data/hyps/hyp.Objects365.yaml"
+    },
+    {
+      "path": "vendor/yolov5/data/hyps/hyp.scratch-high.yaml",
+      "bytes": 1868,
+      "sha256": "acb9f17f91feed15b5f1de246bf6cb04cc5f21ce76f26474ec6146babe8b9eb3",
+      "storage": "vendor/yolov5/data/hyps/hyp.scratch-high.yaml"
+    },
+    {
+      "path": "vendor/yolov5/data/hyps/hyp.scratch-low.yaml",
+      "bytes": 1867,
+      "sha256": "11a36612456841819f5f223a48ed6a51177862f533b6d1287114fb7d2ab2d033",
+      "storage": "vendor/yolov5/data/hyps/hyp.scratch-low.yaml"
+    },
+    {
+      "path": "vendor/yolov5/data/hyps/hyp.scratch-med.yaml",
+      "bytes": 1870,
+      "sha256": "8d01fc4857e4cea7a1196716684a15a0cf7b41d45b670437d0751e444b2b0395",
+      "storage": "vendor/yolov5/data/hyps/hyp.scratch-med.yaml"
+    },
+    {
+      "path": "vendor/yolov5/data/hyps/hyp.VOC.yaml",
+      "bytes": 2307,
+      "sha256": "77e366e37fe24044f15fdf387b2633808433aafff1bc1222b88df96da1ec3529",
+      "storage": "vendor/yolov5/data/hyps/hyp.VOC.yaml"
+    },
+    {
+      "path": "vendor/yolov5/data/ImageNet.yaml",
+      "bytes": 20111,
+      "sha256": "545973162687f7f4d8848d0c55106fd82624ff83d26d13391c004e593bdd053d",
+      "storage": "vendor/yolov5/data/ImageNet.yaml"
+    },
+    {
+      "path": "vendor/yolov5/data/ImageNet10.yaml",
+      "bytes": 1162,
+      "sha256": "648790b9ae8f9082ea0a157fe833e8be3f67ae08515877959e1039aa2f8d2ca3",
+      "storage": "vendor/yolov5/data/ImageNet10.yaml"
+    },
+    {
+      "path": "vendor/yolov5/data/ImageNet100.yaml",
+      "bytes": 2969,
+      "sha256": "c3b6254f7f3485e67f8cb1f9efadad3d2dedc043924a3bf1223d29efff70f983",
+      "storage": "vendor/yolov5/data/ImageNet100.yaml"
+    },
+    {
+      "path": "vendor/yolov5/data/ImageNet1000.yaml",
+      "bytes": 20090,
+      "sha256": "44f1dcd9a45f3dc06bbb59385064492479867ca95dbb3cfbb2938c01c70fae5d",
+      "storage": "vendor/yolov5/data/ImageNet1000.yaml"
+    },
+    {
+      "path": "vendor/yolov5/data/images/bus.jpg",
+      "bytes": 487438,
+      "sha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c",
+      "storage": "vendor/yolov5/data/images/bus.jpg"
+    },
+    {
+      "path": "vendor/yolov5/data/images/zidane.jpg",
+      "bytes": 168949,
+      "sha256": "356dad2107bb0254e4e4a81bc1d9c7140043e88569d546e5b404b19bffa77d0a",
+      "storage": "vendor/yolov5/data/images/zidane.jpg"
+    },
+    {
+      "path": "vendor/yolov5/data/Objects365.yaml",
+      "bytes": 9862,
+      "sha256": "e54de82880ee30a2d468f825623dc698a85072baaf9a19acc9a3e5fb8956e752",
+      "storage": "vendor/yolov5/data/Objects365.yaml"
+    },
+    {
+      "path": "vendor/yolov5/data/scripts/download_weights.sh",
+      "bytes": 687,
+      "sha256": "caa2635d3a18acd44c3ef05818f7aff34c413461321a6a870fec578ad8824704",
+      "storage": "vendor/yolov5/data/scripts/download_weights.sh"
+    },
+    {
+      "path": "vendor/yolov5/data/scripts/get_coco.sh",
+      "bytes": 1656,
+      "sha256": "06c734740aeb6c120956a51c07bf6bc9a59318b61faa69b1e660ff0fb8ce7d44",
+      "storage": "vendor/yolov5/data/scripts/get_coco.sh"
+    },
+    {
+      "path": "vendor/yolov5/data/scripts/get_coco128.sh",
+      "bytes": 661,
+      "sha256": "d3882a7d6de713e33481bc5f53729cb29d3945197c0d7255efad9d06408ea563",
+      "storage": "vendor/yolov5/data/scripts/get_coco128.sh"
+    },
+    {
+      "path": "vendor/yolov5/data/scripts/get_imagenet.sh",
+      "bytes": 1768,
+      "sha256": "08244ce29478eb4724a51718e4a837e2c026631fa2fe3be0d064ebc93e19504c",
+      "storage": "vendor/yolov5/data/scripts/get_imagenet.sh"
+    },
+    {
+      "path": "vendor/yolov5/data/scripts/get_imagenet10.sh",
+      "bytes": 569,
+      "sha256": "aa42f192be4f480a8f9a1e145ee3d96766038325bc8cbbe87384bdb8a3fd070a",
+      "storage": "vendor/yolov5/data/scripts/get_imagenet10.sh"
+    },
+    {
+      "path": "vendor/yolov5/data/scripts/get_imagenet100.sh",
+      "bytes": 577,
+      "sha256": "400007243a824e7f87811db6e16ddf18c9ff3e656b1a3dfa6e13bc1a0da500fd",
+      "storage": "vendor/yolov5/data/scripts/get_imagenet100.sh"
+    },
+    {
+      "path": "vendor/yolov5/data/scripts/get_imagenet1000.sh",
+      "bytes": 584,
+      "sha256": "b97836557d4a6b62e6262d69d7c00cb0063cc4200a8a2214a4ff4807bf7fe8c9",
+      "storage": "vendor/yolov5/data/scripts/get_imagenet1000.sh"
+    },
+    {
+      "path": "vendor/yolov5/data/SKU-110K.yaml",
+      "bytes": 2609,
+      "sha256": "425d678b5a990926112053c206849c236d9871ea3b579afba2a090bdffaa5b10",
+      "storage": "vendor/yolov5/data/SKU-110K.yaml"
+    },
+    {
+      "path": "vendor/yolov5/data/VisDrone.yaml",
+      "bytes": 3131,
+      "sha256": "0f4d4cc111392d92769478d1e1eda5ac94fe69a5668b5c2e9be8c368a8b887d9",
+      "storage": "vendor/yolov5/data/VisDrone.yaml"
+    },
+    {
+      "path": "vendor/yolov5/data/VOC.yaml",
+      "bytes": 3827,
+      "sha256": "36372922fe7a74a90636cf5fcae393ded6651444923bec5c59ee770df13405eb",
+      "storage": "vendor/yolov5/data/VOC.yaml"
+    },
+    {
+      "path": "vendor/yolov5/data/xView.yaml",
+      "bytes": 5702,
+      "sha256": "90ac0093dda1a7c5b5282ac2a566402d4fd79e6634065bcdb0c2e744e4d8f1ca",
+      "storage": "vendor/yolov5/data/xView.yaml"
+    },
+    {
+      "path": "vendor/yolov5/detect.py",
+      "bytes": 24045,
+      "sha256": "1eaf65c886c417abdd54efe989f8d0a924eb74764b9800189b04f20da99670e1",
+      "storage": "vendor/yolov5/detect.py"
+    },
+    {
+      "path": "vendor/yolov5/export.py",
+      "bytes": 70239,
+      "sha256": "c40b056ded333e38bbe2237c1843a6982a4bbd340c7a897656e341de57f2ca7f",
+      "storage": "vendor/yolov5/export.py"
+    },
+    {
+      "path": "vendor/yolov5/hubconf.py",
+      "bytes": 24568,
+      "sha256": "8d3da90b3ed132fb53a725f2e84b97a64bbd62057565cf510ba025ae4c5f61dc",
+      "storage": "vendor/yolov5/hubconf.py"
+    },
+    {
+      "path": "vendor/yolov5/LICENSE",
+      "bytes": 35184,
+      "sha256": "e0eedba615d5cd1b986afb6c5b3a4b1ae33713e7e9dc74d19daec5e3221f9d2e",
+      "storage": "vendor/yolov5/LICENSE"
+    },
+    {
+      "path": "vendor/yolov5/models/__init__.py",
+      "bytes": 71,
+      "sha256": "7cd29367640feb4566385a2e553261a0ca258b31f0b94907a0cdf1e5197e8b9e",
+      "storage": "vendor/yolov5/models/__init__.py"
+    },
+    {
+      "path": "vendor/yolov5/models/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 196,
+      "sha256": "57c7310a252a607e464970e7b32566a3ac225a59fc2450497f83b88f695e3101",
+      "storage": "vendor/yolov5/models/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "path": "vendor/yolov5/models/__pycache__/common.cpython-312.pyc",
+      "bytes": 81126,
+      "sha256": "a335afe312222e2361c6b280b6aae178eb7ef0e97b018ad5e194792b6fcf7a39",
+      "storage": "vendor/yolov5/models/__pycache__/common.cpython-312.pyc"
+    },
+    {
+      "path": "vendor/yolov5/models/__pycache__/experimental.cpython-312.pyc",
+      "bytes": 7267,
+      "sha256": "a56de8f24298e3693ec8b2b5bbb6ad7dd53e8037286b10c46b04fb26005e93c7",
+      "storage": "vendor/yolov5/models/__pycache__/experimental.cpython-312.pyc"
+    },
+    {
+      "path": "vendor/yolov5/models/__pycache__/yolo.cpython-312.pyc",
+      "bytes": 33178,
+      "sha256": "805411cb95750069c5cf6f8ab5d1969bd055ca4885ebd343311313b7497c1188",
+      "storage": "vendor/yolov5/models/__pycache__/yolo.cpython-312.pyc"
+    },
+    {
+      "path": "vendor/yolov5/models/common.py",
+      "bytes": 55232,
+      "sha256": "528c5a0d4138279fa648a9fd146387a9dfdd81487ad90f2d13b6ef7b73b3fe13",
+      "storage": "vendor/yolov5/models/common.py"
+    },
+    {
+      "path": "vendor/yolov5/models/experimental.py",
+      "bytes": 4236,
+      "sha256": "4e9837fc01bf0db28adf2fc7fd938fb817d569f486a90350329b94222afa69c3",
+      "storage": "vendor/yolov5/models/experimental.py"
+    },
+    {
+      "path": "vendor/yolov5/models/hub/anchors.yaml",
+      "bytes": 4338,
+      "sha256": "8e6433444f3914f9972e31a76ab6700402d5ffb0b2e6284457d260bbeb213a1f",
+      "storage": "vendor/yolov5/models/hub/anchors.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/hub/yolov3-spp.yaml",
+      "bytes": 1995,
+      "sha256": "9fd70d0393b747c732f2040210cfaf37c584334da13b428d40fb48c364eb3a98",
+      "storage": "vendor/yolov5/models/hub/yolov3-spp.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/hub/yolov3-tiny.yaml",
+      "bytes": 1624,
+      "sha256": "8057c46a94b227ab1344706cce060fc16d82800f0bf6b9f714aee33a126e825c",
+      "storage": "vendor/yolov5/models/hub/yolov3-tiny.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/hub/yolov3.yaml",
+      "bytes": 1978,
+      "sha256": "b736ce22c9d8d458be23bb0fdca28140ab5de41b4975efaf38c22a0dcfd6d68f",
+      "storage": "vendor/yolov5/models/hub/yolov3.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/hub/yolov5-bifpn.yaml",
+      "bytes": 1856,
+      "sha256": "778f17e47bc96dedfb206b67206964a04dbac073ed150a06d7e9b050d8256dd0",
+      "storage": "vendor/yolov5/models/hub/yolov5-bifpn.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/hub/yolov5-fpn.yaml",
+      "bytes": 1635,
+      "sha256": "c30fefb7ed23eddd0963706eed31c848dd8eb3bdd2905d57dd21c7e5a1a2a0ba",
+      "storage": "vendor/yolov5/models/hub/yolov5-fpn.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/hub/yolov5-p2.yaml",
+      "bytes": 2040,
+      "sha256": "cbfb13f671ef1e6a73111397b12f8a2318454658a73ebeec798e191b52e28ca7",
+      "storage": "vendor/yolov5/models/hub/yolov5-p2.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/hub/yolov5-p34.yaml",
+      "bytes": 1568,
+      "sha256": "d9f9e21703df3f4ec2c8a8dde1bb25f017bd988fe9cda3bcfb9ed14cf24779d0",
+      "storage": "vendor/yolov5/models/hub/yolov5-p34.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/hub/yolov5-p6.yaml",
+      "bytes": 2097,
+      "sha256": "11fb01082b8e5a214e14194ad007d26b2be840084d5f8e2bec50be75eb8f5bc0",
+      "storage": "vendor/yolov5/models/hub/yolov5-p6.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/hub/yolov5-p7.yaml",
+      "bytes": 2494,
+      "sha256": "556458fa2f730bd3ad9f18d8ee4ec0e01aeb9e4f8eb4258c11f74d708b243717",
+      "storage": "vendor/yolov5/models/hub/yolov5-p7.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/hub/yolov5-panet.yaml",
+      "bytes": 1840,
+      "sha256": "446134bbf73dc0d001af837ec193fb112b389e1545e898e500410a5174d378ed",
+      "storage": "vendor/yolov5/models/hub/yolov5-panet.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/hub/yolov5l6.yaml",
+      "bytes": 2273,
+      "sha256": "283ab64dcc650b4ee95a76507adbf7550405112a46b3303613922019317c5e2e",
+      "storage": "vendor/yolov5/models/hub/yolov5l6.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/hub/yolov5m6.yaml",
+      "bytes": 2275,
+      "sha256": "c7c36a0daaf05014d939281d2e705f0d2093ba7a93a422e5a056f0e2266c67df",
+      "storage": "vendor/yolov5/models/hub/yolov5m6.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/hub/yolov5n6.yaml",
+      "bytes": 2275,
+      "sha256": "ee0f4d1a12f0048cc3676f2e9121e51e932a0225263b6978ed9afd6ba8eaec1d",
+      "storage": "vendor/yolov5/models/hub/yolov5n6.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/hub/yolov5s-ghost.yaml",
+      "bytes": 1921,
+      "sha256": "eadb478ceadbb9ccbf28d500d1cf7770aeb3f3e5962c6da79ba156f98d69ab30",
+      "storage": "vendor/yolov5/models/hub/yolov5s-ghost.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/hub/yolov5s-LeakyReLU.yaml",
+      "bytes": 1947,
+      "sha256": "7b9fb680ae125b7ddacaef40a6cc3e1ce672f5da03fb49688ff43570dec16656",
+      "storage": "vendor/yolov5/models/hub/yolov5s-LeakyReLU.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/hub/yolov5s-transformer.yaml",
+      "bytes": 1895,
+      "sha256": "ac966dbd418251757bcd1d8dd16e9fa20cb42270f7c27b5297aa5aa98b98dc86",
+      "storage": "vendor/yolov5/models/hub/yolov5s-transformer.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/hub/yolov5s6.yaml",
+      "bytes": 2275,
+      "sha256": "71deb2c91527aebbc8e519a01a1b1e179045ba7aa2f01e49124adc505f112916",
+      "storage": "vendor/yolov5/models/hub/yolov5s6.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/hub/yolov5x6.yaml",
+      "bytes": 2275,
+      "sha256": "896335231ce66d775333b1c0187280fa34f96270c985cfe72c381b00bd98c452",
+      "storage": "vendor/yolov5/models/hub/yolov5x6.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/segment/yolov5l-seg.yaml",
+      "bytes": 1855,
+      "sha256": "3b0b9ba3b830a8b750f4514e7736647278835c25a87056291b9cc9769c5300e4",
+      "storage": "vendor/yolov5/models/segment/yolov5l-seg.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/segment/yolov5m-seg.yaml",
+      "bytes": 1857,
+      "sha256": "8727f788096a564e92a28e4d54f43d94726c6f4abfe9a71416db229058d540b0",
+      "storage": "vendor/yolov5/models/segment/yolov5m-seg.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/segment/yolov5n-seg.yaml",
+      "bytes": 1857,
+      "sha256": "c0fd5b8893eb0aa8562c789f3f0f165354223c97b28ed68abc3d4171af9e8a2e",
+      "storage": "vendor/yolov5/models/segment/yolov5n-seg.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/segment/yolov5s-seg.yaml",
+      "bytes": 1857,
+      "sha256": "81489fe1a78143580c83b868107d05e38bebab6f88fea2c633331f8d6bd98bb7",
+      "storage": "vendor/yolov5/models/segment/yolov5s-seg.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/segment/yolov5x-seg.yaml",
+      "bytes": 1857,
+      "sha256": "de409054bcead8443edfa38cd0c7f63aabf152d3dc07ed8fd1b2521aa3e24911",
+      "storage": "vendor/yolov5/models/segment/yolov5x-seg.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/tf.py",
+      "bytes": 33758,
+      "sha256": "123a813594366cda293836cb507fba2be1c162fded5a4e941b86e6911580ea81",
+      "storage": "vendor/yolov5/models/tf.py"
+    },
+    {
+      "path": "vendor/yolov5/models/yolo.py",
+      "bytes": 21400,
+      "sha256": "8431729b05d32221f779d5ae0c7c430e0e6b8d5bdd6e7332fc2ce0c19422ffb6",
+      "storage": "vendor/yolov5/models/yolo.py"
+    },
+    {
+      "path": "vendor/yolov5/models/yolov5l.yaml",
+      "bytes": 1815,
+      "sha256": "3a7fb71263798e57c8ccaef69a819b351c4984f679ffd70d5b47408ae536775d",
+      "storage": "vendor/yolov5/models/yolov5l.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/yolov5m.yaml",
+      "bytes": 1817,
+      "sha256": "151c5c3170a9a9382b15127f816bbbf4ba1100a065ec46fe3b980c9ecba2c592",
+      "storage": "vendor/yolov5/models/yolov5m.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/yolov5n.yaml",
+      "bytes": 1817,
+      "sha256": "ddd86fd1fc25ff4285cae7b28d8e1fa07d1d8b8610771d29b59b16f25b549213",
+      "storage": "vendor/yolov5/models/yolov5n.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/yolov5s.yaml",
+      "bytes": 1817,
+      "sha256": "4aac8bb07d027752e6b632e27f0d493a772cd5c2db35020b804e0ec1197009aa",
+      "storage": "vendor/yolov5/models/yolov5s.yaml"
+    },
+    {
+      "path": "vendor/yolov5/models/yolov5x.yaml",
+      "bytes": 1817,
+      "sha256": "25fb25683846e6e77980b3d2abc349138e8503b284cb944d61ac954aff9e3599",
+      "storage": "vendor/yolov5/models/yolov5x.yaml"
+    },
+    {
+      "path": "vendor/yolov5/pyproject.toml",
+      "bytes": 5270,
+      "sha256": "d6f02cdfb1352fd0ba3fdacfde407fd899d52983ee31fc87ec74c3065673b33a",
+      "storage": "vendor/yolov5/pyproject.toml"
+    },
+    {
+      "path": "vendor/yolov5/README.md",
+      "bytes": 46555,
+      "sha256": "72b1ee04a164b3fde91919f24fcdb85e71db2623afd4edfe537a201d15d0f09c",
+      "storage": "vendor/yolov5/README.md"
+    },
+    {
+      "path": "vendor/yolov5/README.zh-CN.md",
+      "bytes": 45675,
+      "sha256": "97d9e4e597d1aebc9273730d5de8ab78a1f6c74cd4f8bdac5fb1db1cebba8e72",
+      "storage": "vendor/yolov5/README.zh-CN.md"
+    },
+    {
+      "path": "vendor/yolov5/requirements.txt",
+      "bytes": 1639,
+      "sha256": "2c12c12fbcb2ac3dd3b6dfce7025a2f908868cab0df1bd4ac610543a3d04e95a",
+      "storage": "vendor/yolov5/requirements.txt"
+    },
+    {
+      "path": "vendor/yolov5/segment/predict.py",
+      "bytes": 16116,
+      "sha256": "403d7c70cef9f9b77320d2af18bdfe50625bdd79e69f83f68da2a4fd0dad5f99",
+      "storage": "vendor/yolov5/segment/predict.py"
+    },
+    {
+      "path": "vendor/yolov5/segment/train.py",
+      "bytes": 34946,
+      "sha256": "f8bb825c24386132e463bad4a39fc23ab00b9e6092d423a3acf70dc232d1c6e2",
+      "storage": "vendor/yolov5/segment/train.py"
+    },
+    {
+      "path": "vendor/yolov5/segment/tutorial.ipynb",
+      "bytes": 42896,
+      "sha256": "a105f8c007c63af261602023a4a50f9e6fd9aab582ccc136a26a0fac0f894dcb",
+      "storage": "vendor/yolov5/segment/tutorial.ipynb"
+    },
+    {
+      "path": "vendor/yolov5/segment/val.py",
+      "bytes": 22070,
+      "sha256": "e2eb70fdf360f4d17a7d6be3aea385108ee133bf09e82c0a89b5ffdba1f3d112",
+      "storage": "vendor/yolov5/segment/val.py"
+    },
+    {
+      "path": "vendor/yolov5/tests/test_flask_rest_api.py",
+      "bytes": 2648,
+      "sha256": "105be48f9b1d13dd81f4f3288dff78005ef79910a60371e74cf4deffdaaf9fca",
+      "storage": "vendor/yolov5/tests/test_flask_rest_api.py"
+    },
+    {
+      "path": "vendor/yolov5/tests/test_invariant_common.py",
+      "bytes": 3548,
+      "sha256": "7c3b141daeafbb5026a33070fe34ef6df50d59f0737cf6d6be5c314db5376711",
+      "storage": "vendor/yolov5/tests/test_invariant_common.py"
+    },
+    {
+      "path": "vendor/yolov5/tests/test_invariant_export.py",
+      "bytes": 3435,
+      "sha256": "47b52c20bd890bad6f90ab91c41256e0e2fb94a44614e8a9b7d784f31ea9dca1",
+      "storage": "vendor/yolov5/tests/test_invariant_export.py"
+    },
+    {
+      "path": "vendor/yolov5/train.py",
+      "bytes": 47901,
+      "sha256": "3695fb2da4b7d05fa506bae04b04e593ec91539770864d741d771e73c2ad2697",
+      "storage": "vendor/yolov5/train.py"
+    },
+    {
+      "path": "vendor/yolov5/tutorial.ipynb",
+      "bytes": 39693,
+      "sha256": "976023ae9ce26fcc0699e78ecce51264e2b3d9324169eb57c92a73cf747434dd",
+      "storage": "vendor/yolov5/tutorial.ipynb"
+    },
+    {
+      "path": "vendor/yolov5/utils/__init__.py",
+      "bytes": 1551,
+      "sha256": "d06cbbe0541ad7ed6c064ce8feba69460e49c9ae7ec0ee3197c9f986176a0b22",
+      "storage": "vendor/yolov5/utils/__init__.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 2100,
+      "sha256": "938f01455051410bc25abc4fb0babd866418eee487c5eacb9a3e358257127de7",
+      "storage": "vendor/yolov5/utils/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "path": "vendor/yolov5/utils/__pycache__/augmentations.cpython-312.pyc",
+      "bytes": 21801,
+      "sha256": "2135c642f530d43bc1f314c0d059e28ab6c7c4d941891e0c3e7cdf8373490a29",
+      "storage": "vendor/yolov5/utils/__pycache__/augmentations.cpython-312.pyc"
+    },
+    {
+      "path": "vendor/yolov5/utils/__pycache__/autoanchor.cpython-312.pyc",
+      "bytes": 12207,
+      "sha256": "89696aa22c1e5c0674b1e8956986af6540b5a75f4fb19f31dfd619846a3ade5b",
+      "storage": "vendor/yolov5/utils/__pycache__/autoanchor.cpython-312.pyc"
+    },
+    {
+      "path": "vendor/yolov5/utils/__pycache__/dataloaders.cpython-312.pyc",
+      "bytes": 63312,
+      "sha256": "791695e21df957b3272d7daacb014739dfbab228ff67748b7364b2750db5c61e",
+      "storage": "vendor/yolov5/utils/__pycache__/dataloaders.cpython-312.pyc"
+    },
+    {
+      "path": "vendor/yolov5/utils/__pycache__/downloads.cpython-312.pyc",
+      "bytes": 7375,
+      "sha256": "557c8170e6e6a3c218b1c20a29dbf950cf507c4a701185b67bb51e4c73cfb551",
+      "storage": "vendor/yolov5/utils/__pycache__/downloads.cpython-312.pyc"
+    },
+    {
+      "path": "vendor/yolov5/utils/__pycache__/general.cpython-312.pyc",
+      "bytes": 55463,
+      "sha256": "0fab9280b1e9d28f86cb0f76fb8664e1b3aff6e786397fa600e94c4d0b355f37",
+      "storage": "vendor/yolov5/utils/__pycache__/general.cpython-312.pyc"
+    },
+    {
+      "path": "vendor/yolov5/utils/__pycache__/metrics.cpython-312.pyc",
+      "bytes": 16247,
+      "sha256": "783bd5e131f5f9be37393a3f44487be11d931dc425c5b41d5ad065d34372eba4",
+      "storage": "vendor/yolov5/utils/__pycache__/metrics.cpython-312.pyc"
+    },
+    {
+      "path": "vendor/yolov5/utils/__pycache__/torch_utils.cpython-312.pyc",
+      "bytes": 25449,
+      "sha256": "5bacb524809a12acc2c8776e03a55db664bf96c572b5b2bd9b376d1f0a7d4dab",
+      "storage": "vendor/yolov5/utils/__pycache__/torch_utils.cpython-312.pyc"
+    },
+    {
+      "path": "vendor/yolov5/utils/activations.py",
+      "bytes": 5212,
+      "sha256": "392eb7c3b776f830dcd9030fee6b3da1101463270196936e6d421880899b4553",
+      "storage": "vendor/yolov5/utils/activations.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/augmentations.py",
+      "bytes": 15341,
+      "sha256": "378733523f128f3dc2982b4351a7fa4a9d589663ed4629eb1bc35878c1217a40",
+      "storage": "vendor/yolov5/utils/augmentations.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/autoanchor.py",
+      "bytes": 7553,
+      "sha256": "3ae55ac43283f408e3578e53840b17b1967914277c19a97ed042473d5db7a675",
+      "storage": "vendor/yolov5/utils/autoanchor.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/autobatch.py",
+      "bytes": 3160,
+      "sha256": "4f87c9bf061c0e92101a93fee4d3d0b53273153256836cde9fb1a88e1ff8fff3",
+      "storage": "vendor/yolov5/utils/autobatch.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/callbacks.py",
+      "bytes": 2487,
+      "sha256": "060e22e2f53a8beeefa78b9ce77ae009d7a385d8662a508508c32b01b85e1255",
+      "storage": "vendor/yolov5/utils/callbacks.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/dataloaders.py",
+      "bytes": 45647,
+      "sha256": "4f9cb92e939223e2cc7a4abfd7c27f00fe72a9ac76439d940737c5e119ac422f",
+      "storage": "vendor/yolov5/utils/dataloaders.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/docker/Dockerfile",
+      "bytes": 2231,
+      "sha256": "967967b4b887f546bb932a42c84fbc58df274e9a2c0bde17c5de22295b9673ff",
+      "storage": "vendor/yolov5/utils/docker/Dockerfile"
+    },
+    {
+      "path": "vendor/yolov5/utils/docker/Dockerfile-arm64",
+      "bytes": 1742,
+      "sha256": "76f83ebe3c28061cc075e699cffc747caea2daba5252cf3c845744cdde5f06e0",
+      "storage": "vendor/yolov5/utils/docker/Dockerfile-arm64"
+    },
+    {
+      "path": "vendor/yolov5/utils/docker/Dockerfile-cpu",
+      "bytes": 1733,
+      "sha256": "e232ba0f9e124c718d5c8b15e7ff200d5f9f4dd0cf40246089533d4d0a26c9ae",
+      "storage": "vendor/yolov5/utils/docker/Dockerfile-cpu"
+    },
+    {
+      "path": "vendor/yolov5/utils/downloads.py",
+      "bytes": 5108,
+      "sha256": "6698d23e3e9eff63f4471dc747cd5e34d15465d07f541aa3ce6435d3973ae139",
+      "storage": "vendor/yolov5/utils/downloads.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/flask_rest_api/example_request.py",
+      "bytes": 557,
+      "sha256": "bf1d63fd1cdf81e6a58a8c0f8750d74734e270078f04c9ac90ec5a3a08197ced",
+      "storage": "vendor/yolov5/utils/flask_rest_api/example_request.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/flask_rest_api/README.md",
+      "bytes": 4356,
+      "sha256": "be9f1ac958dba82abb9e59b5348259ea0f1687b48bf524740b4a58aebf403470",
+      "storage": "vendor/yolov5/utils/flask_rest_api/README.md"
+    },
+    {
+      "path": "vendor/yolov5/utils/flask_rest_api/restapi.py",
+      "bytes": 2922,
+      "sha256": "21b799716fc87dc28e8f12b719cd29a6e1cd75dcd02253383b543082fb13b114",
+      "storage": "vendor/yolov5/utils/flask_rest_api/restapi.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/general.py",
+      "bytes": 40070,
+      "sha256": "522764e101ec5c2cd6fc005e6ea167ca31c1bd6f04124ef6d4c5a1750bd1174b",
+      "storage": "vendor/yolov5/utils/general.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/loggers/__init__.py",
+      "bytes": 19423,
+      "sha256": "7294429d6a82c44b4040b9c95d33067f4c879c9f400f9877de70b338e7b443ab",
+      "storage": "vendor/yolov5/utils/loggers/__init__.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/loggers/clearml/__init__.py",
+      "bytes": 71,
+      "sha256": "7cd29367640feb4566385a2e553261a0ca258b31f0b94907a0cdf1e5197e8b9e",
+      "storage": "vendor/yolov5/utils/loggers/clearml/__init__.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/loggers/clearml/clearml_utils.py",
+      "bytes": 10691,
+      "sha256": "d6cd0ceb9e48996ee848f6a5b66377ddb20c532d94652c50c8ef295d0e82bed6",
+      "storage": "vendor/yolov5/utils/loggers/clearml/clearml_utils.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/loggers/clearml/hpo.py",
+      "bytes": 5379,
+      "sha256": "4629f0c653f58746cafb4e41893998ae4060745f72f353af28d9dae7d21bac32",
+      "storage": "vendor/yolov5/utils/loggers/clearml/hpo.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/loggers/clearml/README.md",
+      "bytes": 12295,
+      "sha256": "bd79f8ec9da032e32148c9049f3b1eb2f50ec35ab096680a83e1ce5f3f11e77f",
+      "storage": "vendor/yolov5/utils/loggers/clearml/README.md"
+    },
+    {
+      "path": "vendor/yolov5/utils/loggers/comet/__init__.py",
+      "bytes": 21554,
+      "sha256": "abd036d996757c3fdd1ae940127d91403ddd2285ad507fb11a73d3a1a5ad9e5b",
+      "storage": "vendor/yolov5/utils/loggers/comet/__init__.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/loggers/comet/comet_utils.py",
+      "bytes": 4141,
+      "sha256": "4cd17c13ef06184d9e0a78d98432b14e6763ea62f1889beefc7f5cab6e0083cf",
+      "storage": "vendor/yolov5/utils/loggers/comet/comet_utils.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/loggers/comet/hpo.py",
+      "bytes": 6767,
+      "sha256": "f5c4c4dbcf3a3c623a01d793080689c4bc27f9192c88df59a161c0d4fe105722",
+      "storage": "vendor/yolov5/utils/loggers/comet/hpo.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/loggers/comet/optimizer_config.json",
+      "bytes": 2562,
+      "sha256": "6bf1daaaf4594a09198b46a5d67befe56150646bbce6443dfdb623c675d5e7c3",
+      "storage": "vendor/yolov5/utils/loggers/comet/optimizer_config.json"
+    },
+    {
+      "path": "vendor/yolov5/utils/loggers/comet/README.md",
+      "bytes": 13950,
+      "sha256": "7c3bffecf8d3f47c2e70da4d9e7a8e202a68ebc7b8d4e36881a1e994d96e2779",
+      "storage": "vendor/yolov5/utils/loggers/comet/README.md"
+    },
+    {
+      "path": "vendor/yolov5/utils/loggers/wandb/__init__.py",
+      "bytes": 71,
+      "sha256": "7cd29367640feb4566385a2e553261a0ca258b31f0b94907a0cdf1e5197e8b9e",
+      "storage": "vendor/yolov5/utils/loggers/wandb/__init__.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/loggers/wandb/wandb_utils.py",
+      "bytes": 7034,
+      "sha256": "086d05f25cdf250199d5459ac62f68608b1fd28fa0c19924e43d39fbee41ca9d",
+      "storage": "vendor/yolov5/utils/loggers/wandb/wandb_utils.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/loss.py",
+      "bytes": 10946,
+      "sha256": "53035f01eeff5d944a9dc0b53b02e3515f3c5356465530b792a66c59a2931f99",
+      "storage": "vendor/yolov5/utils/loss.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/metrics.py",
+      "bytes": 11722,
+      "sha256": "f81adaed4a909888e8a5a4f265b25c46caf2682d9069da4c7caa95a3b61b8f5b",
+      "storage": "vendor/yolov5/utils/metrics.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/plots.py",
+      "bytes": 12762,
+      "sha256": "ff884d0e158ac79fa53b420e9b7453ef7172f066dccf490954818e8ad28c34c2",
+      "storage": "vendor/yolov5/utils/plots.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/segment/__init__.py",
+      "bytes": 71,
+      "sha256": "7cd29367640feb4566385a2e553261a0ca258b31f0b94907a0cdf1e5197e8b9e",
+      "storage": "vendor/yolov5/utils/segment/__init__.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/segment/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 203,
+      "sha256": "1f1ee5e698183bd81799e59d5e1b20b82e33f9949ef8d95a89c4b702a8bac1e1",
+      "storage": "vendor/yolov5/utils/segment/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "path": "vendor/yolov5/utils/segment/__pycache__/general.cpython-312.pyc",
+      "bytes": 6955,
+      "sha256": "e00551a4d59b3559f65eda2b80f53dc5f22b5f1c52fa17829530d5e646204ebd",
+      "storage": "vendor/yolov5/utils/segment/__pycache__/general.cpython-312.pyc"
+    },
+    {
+      "path": "vendor/yolov5/utils/segment/augmentations.py",
+      "bytes": 3627,
+      "sha256": "2bb162b71f495c98f9434e89455ce63afa690fb8d5c65b8c05fd22e117714ce1",
+      "storage": "vendor/yolov5/utils/segment/augmentations.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/segment/dataloaders.py",
+      "bytes": 11908,
+      "sha256": "0902f7e9a55f910934cbbf9a5958beb8adc47a7d4678a9e311e9ea4bb49e4617",
+      "storage": "vendor/yolov5/utils/segment/dataloaders.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/segment/general.py",
+      "bytes": 5030,
+      "sha256": "124a84e506abc2ea71199813ebe4e989ad7fe0e602a41dfdbdf8efbde8f6b636",
+      "storage": "vendor/yolov5/utils/segment/general.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/segment/loss.py",
+      "bytes": 9336,
+      "sha256": "a36974f5ddf40b6ac887b449605533a13f1fdb2cc5c80e7782f5e81bafe1850d",
+      "storage": "vendor/yolov5/utils/segment/loss.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/segment/metrics.py",
+      "bytes": 7060,
+      "sha256": "d61c172637a3a1b5377dce0acc50da9db2b1600702720e152287ac92e37333c9",
+      "storage": "vendor/yolov5/utils/segment/metrics.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/segment/plots.py",
+      "bytes": 6772,
+      "sha256": "7168472c18fcd31543e27af3314566d1f25946ff0fa00de64f8cb450d9f1613a",
+      "storage": "vendor/yolov5/utils/segment/plots.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/torch_utils.py",
+      "bytes": 17372,
+      "sha256": "915f9a1989bd1c3dda3b71cb95640f4563ffb06cb0c2bac57272881402d63401",
+      "storage": "vendor/yolov5/utils/torch_utils.py"
+    },
+    {
+      "path": "vendor/yolov5/utils/triton.py",
+      "bytes": 3566,
+      "sha256": "758b7e133d7995dddfc4e8c3375c8815d08e2e5ff69a916d8bd357108f8ea1bf",
+      "storage": "vendor/yolov5/utils/triton.py"
+    },
+    {
+      "path": "vendor/yolov5/val.py",
+      "bytes": 27343,
+      "sha256": "0b2fba341d55f6f49a30662dfb488e8853dc494a108ec5a29f983d9b6997c37a",
+      "storage": "vendor/yolov5/val.py"
+    },
+    {
+      "path": "weed_vision/__init__.py",
+      "bytes": 72,
+      "sha256": "70aa0b77e7ddfcd9cb7c373b78fc479603d8368055479891c10675ab78ca2fcc",
+      "storage": "weed_vision/__init__.py"
+    },
+    {
+      "path": "weed_vision/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 273,
+      "sha256": "ad2ba1a248b26eb8b4e0cbb604112c0c9be5cba0e29fec3ca2521e5e6edb5ca1",
+      "storage": "weed_vision/__pycache__/__init__.cpython-312.pyc"
+    },
+    {
+      "path": "weed_vision/__pycache__/config.cpython-312.pyc",
+      "bytes": 2650,
+      "sha256": "1bc2ed50f7ca4dfeb9273f5c88ce73bd33e84d60ca4b9abcfee7877c87715e09",
+      "storage": "weed_vision/__pycache__/config.cpython-312.pyc"
+    },
+    {
+      "path": "weed_vision/__pycache__/errors.cpython-312.pyc",
+      "bytes": 1178,
+      "sha256": "0a8048c455d3a8d8ee0e374cebbcea2a494d589b5a2221200286909e283a564e",
+      "storage": "weed_vision/__pycache__/errors.cpython-312.pyc"
+    },
+    {
+      "path": "weed_vision/__pycache__/images.cpython-312.pyc",
+      "bytes": 3500,
+      "sha256": "8c9a6b3cfbcf09731074edcf921665eb8965f8af435c6310de19ed1658457cc5",
+      "storage": "weed_vision/__pycache__/images.cpython-312.pyc"
+    },
+    {
+      "path": "weed_vision/__pycache__/main.cpython-312.pyc",
+      "bytes": 11414,
+      "sha256": "b7f6e0d075c351b427060e13db11fb6ea2d5b654efa6bbc57c37993c5e00f40e",
+      "storage": "weed_vision/__pycache__/main.cpython-312.pyc"
+    },
+    {
+      "path": "weed_vision/__pycache__/mapping.cpython-312.pyc",
+      "bytes": 13687,
+      "sha256": "95e140247bcbf36994fc69f40e3c39149fc446e95fa21b01e9ef488b499d3d16",
+      "storage": "weed_vision/__pycache__/mapping.cpython-312.pyc"
+    },
+    {
+      "path": "weed_vision/__pycache__/mapping_api.cpython-312.pyc",
+      "bytes": 5659,
+      "sha256": "29dba2cd30423ec2ba9b27fdff10bbb4b918340d034deced168256095c74c3f3",
+      "storage": "weed_vision/__pycache__/mapping_api.cpython-312.pyc"
+    },
+    {
+      "path": "weed_vision/__pycache__/middleware.cpython-312.pyc",
+      "bytes": 4635,
+      "sha256": "69b2e417d784f308aefa64c52f8785785c1b525d656147f3a25492146f96d8d6",
+      "storage": "weed_vision/__pycache__/middleware.cpython-312.pyc"
+    },
+    {
+      "path": "weed_vision/__pycache__/preprocessing.cpython-312.pyc",
+      "bytes": 1887,
+      "sha256": "a3d6bd9a64a2c25b0574fb8527bf8aa6b2590b05a6236ab5766b9c0bc64588ed",
+      "storage": "weed_vision/__pycache__/preprocessing.cpython-312.pyc"
+    },
+    {
+      "path": "weed_vision/__pycache__/quantization.cpython-312.pyc",
+      "bytes": 12411,
+      "sha256": "9090007b12b074a56eb82ba5941bc9a9a881dec61defd6d2f233856aab282b85",
+      "storage": "weed_vision/__pycache__/quantization.cpython-312.pyc"
+    },
+    {
+      "path": "weed_vision/__pycache__/schemas.cpython-312.pyc",
+      "bytes": 2505,
+      "sha256": "e5d7d1199330c2694a7e2e6407ab7271e4ecfc7963febe45d915153c4f76736d",
+      "storage": "weed_vision/__pycache__/schemas.cpython-312.pyc"
+    },
+    {
+      "path": "weed_vision/__pycache__/segmenter.cpython-312.pyc",
+      "bytes": 10432,
+      "sha256": "8453eed320310e8649621a52aa97ab33b3db42523e3af9111ff8d25075fbda78",
+      "storage": "weed_vision/__pycache__/segmenter.cpython-312.pyc"
+    },
+    {
+      "path": "weed_vision/__pycache__/sensor_schemas.cpython-312.pyc",
+      "bytes": 9749,
+      "sha256": "1fff20c08585a71160a540c68498b36a549b63c34e7509fe8f01160ca9b83e81",
+      "storage": "weed_vision/__pycache__/sensor_schemas.cpython-312.pyc"
+    },
+    {
+      "path": "weed_vision/__pycache__/yolov5_runtime.cpython-312.pyc",
+      "bytes": 5563,
+      "sha256": "9e59d0bd37ed3277c2c13a2f19d33e617e45131bc730c36276f9b3ae2a323882",
+      "storage": "weed_vision/__pycache__/yolov5_runtime.cpython-312.pyc"
+    },
+    {
+      "path": "weed_vision/__pycache__/yolov5_segmenter.cpython-312.pyc",
+      "bytes": 8856,
+      "sha256": "85af716841b0b7e10690b10374089fd190895df8a647701660c7362dbc7c6b9d",
+      "storage": "weed_vision/__pycache__/yolov5_segmenter.cpython-312.pyc"
+    },
+    {
+      "path": "weed_vision/config.py",
+      "bytes": 1605,
+      "sha256": "69ba45bd832aa8199036adfd21480d57915c5ed2580378b1e00ad169a1952f6f",
+      "storage": "weed_vision/config.py"
+    },
+    {
+      "path": "weed_vision/errors.py",
+      "bytes": 554,
+      "sha256": "f1a013941a4f60fbc0698aa87a7982288a1514b85ff7fddf960cfe8fc8e56ff0",
+      "storage": "weed_vision/errors.py"
+    },
+    {
+      "path": "weed_vision/images.py",
+      "bytes": 2175,
+      "sha256": "0b57496dcffaf70426c47e3745fbfa31115aeee6aab0577040eb3e7ab95f10b5",
+      "storage": "weed_vision/images.py"
+    },
+    {
+      "path": "weed_vision/main.py",
+      "bytes": 8152,
+      "sha256": "77de12966013a772405cb319762c6957f69b4c98a4df8efcf43b0fcba3b4c455",
+      "storage": "weed_vision/main.py"
+    },
+    {
+      "path": "weed_vision/mapping.py",
+      "bytes": 8937,
+      "sha256": "816004c176b382ffe61051b13df0585b815e193c5f65bcaddeecb3e3046477e0",
+      "storage": "weed_vision/mapping.py"
+    },
+    {
+      "path": "weed_vision/mapping_api.py",
+      "bytes": 3566,
+      "sha256": "a4eb9c90698bf6f0f85f65e077be0ab4d4052a140c63eb6d7af1473b28dfe8a7",
+      "storage": "weed_vision/mapping_api.py"
+    },
+    {
+      "path": "weed_vision/middleware.py",
+      "bytes": 3090,
+      "sha256": "ddefaf86ab53feb5ebc59d1d92c3263baf2c7da402848355b8d3daff45257e91",
+      "storage": "weed_vision/middleware.py"
+    },
+    {
+      "path": "weed_vision/preprocessing.py",
+      "bytes": 987,
+      "sha256": "bbff739d5b79584a6619c1b84cc64c4762129f511b03bb49fd84850c3cad54fa",
+      "storage": "weed_vision/preprocessing.py"
+    },
+    {
+      "path": "weed_vision/quantization.py",
+      "bytes": 6500,
+      "sha256": "44d9d29301fbe57d60ffaa1a9c312075bff0cbb1b01493cf0f9c76b7cbec80f5",
+      "storage": "weed_vision/quantization.py"
+    },
+    {
+      "path": "weed_vision/schemas.py",
+      "bytes": 1209,
+      "sha256": "bdecb308501a6d200d7cd1fafd645a668dabefa00cacb78c18ade19f9b0a27d0",
+      "storage": "weed_vision/schemas.py"
+    },
+    {
+      "path": "weed_vision/segmenter.py",
+      "bytes": 6102,
+      "sha256": "07be712e41d2258db0b7b33dee6b2a9fd83bbcde5bee7057722488c3bd8b296d",
+      "storage": "weed_vision/segmenter.py"
+    },
+    {
+      "path": "weed_vision/sensor_schemas.py",
+      "bytes": 5384,
+      "sha256": "9d6012beac15c90f35bc312f2415e7b37f9996c6d3bfeeada172a111576183e7",
+      "storage": "weed_vision/sensor_schemas.py"
+    },
+    {
+      "path": "weed_vision/web/app.js",
+      "bytes": 12911,
+      "sha256": "039134c5de5adf9aa8ecb3b9f5f27a22eb3597b2e124a5164464c848617eef7c",
+      "storage": "weed_vision/web/app.js"
+    },
+    {
+      "path": "weed_vision/web/index.html",
+      "bytes": 6988,
+      "sha256": "f35560aa826f3a66b7de5208a2704aa4b994f960d7bfde46f21d23686187ce45",
+      "storage": "weed_vision/web/index.html"
+    },
+    {
+      "path": "weed_vision/web/style.css",
+      "bytes": 5924,
+      "sha256": "8196aaac4fc52809b8eb510cff92db4f7adeaffb09bfc65cb340e989ccb52cbb",
+      "storage": "weed_vision/web/style.css"
+    },
+    {
+      "path": "weed_vision/yolov5_runtime.py",
+      "bytes": 3187,
+      "sha256": "e32d8436069e5f43b5a148d8a29866ece0cf9220a1c25fe901e79eb5c5b199cc",
+      "storage": "weed_vision/yolov5_runtime.py"
+    },
+    {
+      "path": "weed_vision/yolov5_segmenter.py",
+      "bytes": 5378,
+      "sha256": "527bc8492a5b3070401c02ee002f7ec50b3c4d10eeea9caa0bc40de2ca5d0df6",
+      "storage": "weed_vision/yolov5_segmenter.py"
+    },
+    {
+      "path": "yolo26n-seg.pt",
+      "bytes": 6719965,
+      "sha256": "361fbfabab285c3237700b6bb91d7ecfa602cd945fffda8dbe1242829b71e73f",
+      "storage": "yolo26n-seg.pt"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[Unit]
+Description=YOLOv5 lawn weed segmentation API
+After=network.target
+
+[Service]
+Type=simple
+# Replace this with your actual Jetson login user and project directory.
+User=jetson
+WorkingDirectory=/opt/lawn-weed-vision
+Environment=PYTHONUNBUFFERED=1
+Environment=YOLO_AUTOINSTALL=false
+Environment=YOLOv5_AUTOINSTALL=false
+ExecStart=/opt/lawn-weed-vision/.venv/bin/python -m uvicorn weed_vision.main:app --host 127.0.0.1 --port 8000 --workers 1
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

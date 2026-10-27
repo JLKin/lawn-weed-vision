@@ -1,0 +1,47 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - paragraph [ref=e5]: 视觉模型 · 本地调试
+      - heading "智能除草机模型测试" [level=1] [ref=e6]
+      - paragraph [ref=e7]: 上传一张图片，检查分割模型的运行状态与识别结果。
+    - link "接口文档 ↗" [ref=e8] [cursor=pointer]:
+      - /url: /api-docs
+  - region "模型运行状态" [ref=e9]:
+    - generic [ref=e10]:
+      - status [ref=e11]: 模型已就绪，可以开始识别
+      - paragraph [ref=e12]: 模型版本：yolo26n-seg.pt@sha256:361fbfabab28
+    - button "刷新状态" [ref=e13] [cursor=pointer]
+  - paragraph [ref=e14]: 默认权重是通用预训练模型，仅用于部署测试。真实除草前需要使用草坪与杂草数据微调；完成标定前，地面坐标为空。
+  - generic [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]: "01"
+        - heading "上传与参数" [level=2] [ref=e19]
+      - group [ref=e21]:
+        - generic [ref=e22]: 待识别图片 必填
+        - generic [ref=e23]:
+          - button "待识别图片 必填 选择图片" [active] [ref=e24]
+          - generic [ref=e25] [cursor=pointer]: 选择图片
+          - generic [ref=e26]: 尚未选择图片
+        - paragraph [ref=e27]: 支持 JPG、PNG、WebP，上传大小与像素数由服务配置限制。
+        - generic [ref=e28]: 相机编号 必填
+        - textbox "相机编号 必填" [ref=e29]: front_rgb
+        - paragraph [ref=e30]: "以英文字母或数字开头，最多 64 个字符，可包含 _ . : -"
+        - generic [ref=e31]: 采集时间戳 选填 · 纳秒
+        - textbox "采集时间戳 选填 · 纳秒" [ref=e32]:
+          - /placeholder: 留空表示不提供采集时间
+        - paragraph [ref=e33]: 填写采集端的非负整数时间戳，最大值为 9223372036854775807。
+        - button "开始识别" [ref=e34] [cursor=pointer]
+      - status [ref=e35]: 请先选择一张图片。
+    - region "上传图片预览" [ref=e36]:
+      - generic [ref=e37]:
+        - generic [ref=e38]: "02"
+        - heading "图片预览" [level=2] [ref=e39]
+      - paragraph [ref=e41]: 选择图片后，这里将显示原图。
+      - paragraph [ref=e42]: 这里显示上传原图，识别数据将在下方展示。
+  - region [ref=e43]:
+    - generic [ref=e44]:
+      - generic [ref=e45]: "03"
+      - heading "识别结果" [level=2] [ref=e46]
+    - paragraph [ref=e47]: 尚无识别结果。完成上传后，查看目标类别、置信度和像素信息。
+  - generic [ref=e48]: 本地视觉测试 · 地面坐标与执行机构控制尚未接入

@@ -1,0 +1,62 @@
+{
+  "image_manifest": [
+    {
+      "name": "bus.jpg",
+      "sha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c"
+    }
+  ],
+  "task_accuracy_validated": false,
+  "note": "Output agreement is not ground-truth accuracy; latency excludes model load.",
+  "models": [
+    {
+      "model": "models\\yolov5n-seg.pt",
+      "model_version": "yolov5n-seg.pt@sha256:1ee00e5e14e3",
+      "network": {
+        "p50_ms": 34.78870000026291,
+        "p95_ms": 34.78870000026291,
+        "samples": 1
+      },
+      "preprocessing_inference_postprocessing": {
+        "p50_ms": 61.56620000001567,
+        "p95_ms": 61.56620000001567,
+        "samples": 1
+      },
+      "peak_torch_allocated_bytes": null,
+      "mask_agreement": []
+    },
+    {
+      "model": "models\\yolov5n-seg.pt",
+      "model_version": "yolov5n-seg.pt@sha256:1ee00e5e14e3",
+      "network": {
+        "p50_ms": 33.698800000365736,
+        "p95_ms": 33.698800000365736,
+        "samples": 1
+      },
+      "preprocessing_inference_postprocessing": {
+        "p50_ms": 61.18739999965328,
+        "p95_ms": 61.18739999965328,
+        "samples": 1
+      },
+      "peak_torch_allocated_bytes": null,
+      "mask_agreement": [
+        {
+          "image": "bus.jpg",
+          "reference_count": 4,
+          "candidate_count": 4,
+          "matched_iou_ge_0_5": 4,
+          "unmatched_reference": 0,
+          "unmatched_candidate": 0,
+          "mean_matched_mask_iou": 1.0
+        }
+      ]
+    }
+  ],
+  "independent_http_service": {
+    "p50_ms": 179.80790000001434,
+    "p95_ms": 179.80790000001434,
+    "samples": 1,
+    "model_versions": [
+      "yolov5n-seg.pt@sha256:1ee00e5e14e3"
+    ]
+  }
+}

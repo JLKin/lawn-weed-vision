@@ -1,0 +1,3 @@
+# Install with target-generated constraints, after validating NVIDIA torch/torchvision.
+# TensorRT itself comes from JetPack, not pip.
+onnx>=1.16,<2

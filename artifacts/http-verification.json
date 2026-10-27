@@ -1,0 +1,14 @@
+{
+  "health_status": 200,
+  "openapi_status": 200,
+  "python_client_exit": 0,
+  "curl_exit": 0,
+  "timestamp_exact": true,
+  "detections": 5,
+  "classes": [
+    "bus",
+    "person"
+  ],
+  "inference_ms": 77.238,
+  "server_stopped_after_test": true
+}

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>智能除草机 · 模型测试</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">YOLOv5 实例分割 · 模型调试</p>
+        <h1>智能除草机模型测试</h1>
+        <p class="subtitle">上传一张图片，检查分割模型的运行状态与识别结果。</p>
+      </div>
+      <a href="/api-docs" class="text-link">接口文档 ↗</a>
+    </header>
+
+    <section class="health-bar" aria-label="模型运行状态">
+      <div><strong id="health-status" role="status">正在检查模型状态…</strong><p id="model-version">等待服务响应</p></div>
+      <button type="button" id="check-health" class="secondary">刷新状态</button>
+    </section>
+    <p class="notice">默认 YOLOv5 分割权重是通用预训练模型，仅用于部署测试。真实除草前需要使用草坪与杂草数据微调；完成标定前，地面坐标为空。</p>
+
+    <div class="workspace">
+      <section class="card">
+        <div class="section-heading"><span class="step">01</span><h2>上传与参数</h2></div>
+        <form id="test-form" novalidate>
+          <fieldset id="form-fields">
+            <label class="field-label" for="image-file">待识别图片 <span class="required">必填</span></label>
+            <div class="file-picker">
+              <input class="visually-hidden" type="file" id="image-file" name="file" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp">
+              <label for="image-file" class="file-button">选择图片</label>
+              <span id="file-name">尚未选择图片</span>
+            </div>
+            <p class="hint">支持 JPG、PNG、WebP，上传大小与像素数由服务配置限制。</p>
+
+            <label class="field-label" for="camera-id">相机编号 <span class="required">必填</span></label>
+            <input id="camera-id" name="camera_id" type="text" value="front_rgb" maxlength="64" aria-describedby="camera-hint" spellcheck="false">
+            <p class="hint" id="camera-hint">以英文字母或数字开头，最多 64 个字符，可包含 _ . : -</p>
+
+            <label class="field-label" for="capture-timestamp">采集时间戳 <span class="optional">选填 · 纳秒</span></label>
+            <input id="capture-timestamp" name="capture_timestamp_ns" type="text" inputmode="numeric" placeholder="留空表示不提供采集时间" aria-describedby="timestamp-hint" spellcheck="false">
+            <p class="hint" id="timestamp-hint">填写采集端的非负整数时间戳，最大值为 9223372036854775807。</p>
+            <label class="field-label"><input type="checkbox" id="mapping-mode"> 同时进行传感器映射</label>
+            <div id="mapping-fields" hidden>
+              <label class="field-label" for="sensor-context">传感器数据（JSON）</label>
+              <textarea id="sensor-context" rows="10" spellcheck="false" aria-describedby="mapping-hint"></textarea>
+              <p class="hint" id="mapping-hint">此模式使用 JSON 中的相机编号与时间戳，纳秒时间戳必须加引号。填入雷达、海拔及标定编号；未提供标定时只返回识别结果和原因。示例时间为占位值，需替换为实际采集时间。</p>
+            </div>
+            <button type="submit" id="submit-button" class="primary">开始识别</button>
+          </fieldset>
+        </form>
+        <p id="feedback" class="feedback" role="status" aria-live="polite">选择图片后即可开始测试。</p>
+      </section>
+
+      <section class="card preview-card" aria-label="上传图片预览">
+        <div class="section-heading"><span class="step">02</span><h2>图片预览</h2></div>
+        <div class="preview-area">
+          <p id="preview-empty">选择图片后，这里将显示原图。</p>
+          <img id="image-preview" alt="待识别图片的原图预览" hidden>
+        </div>
+        <p class="hint">这里显示上传原图，识别数据将在下方展示。</p>
+      </section>
+    </div>
+
+    <section class="card results-card" aria-labelledby="results-heading" aria-busy="false" id="results-panel">
+      <div class="section-heading"><span class="step">03</span><h2 id="results-heading">识别结果</h2></div>
+      <p id="result-empty" class="empty-state">尚无识别结果。完成上传后，查看目标类别、置信度和像素信息。</p>
+      <div id="result-content" hidden>
+        <dl class="metrics">
+          <div><dt>识别实例</dt><dd id="result-count">—</dd></div>
+          <div><dt>推理耗时</dt><dd id="result-time">—</dd></div>
+          <div><dt>图像尺寸</dt><dd id="result-size">—</dd></div>
+        </dl>
+        <p class="hint" id="result-context"></p>
+        <p class="hint" id="result-request"></p>
+        <p class="hint" id="result-model"></p>
+        <section id="mapping-results" hidden aria-label="传感器映射结果">
+          <p class="notice" id="mapping-status"></p>
+          <canvas id="mapping-canvas" aria-label="图像上的雷达投影点"></canvas>
+          <p class="hint">蓝色圆点为投影位置，编号对应下表。雷达反射点与目标地面估计分开显示；有多个候选时保留歧义。</p>
+          <div class="table-scroll"><table><thead><tr><th>雷达目标</th><th>处理状态</th><th>图像像素</th><th>车体坐标（米）</th><th>候选实例编号</th></tr></thead><tbody id="radar-body"></tbody></table></div>
+        </section>
+        <p id="no-detections" class="notice" hidden>没有达到置信度阈值的分割实例。通用模型可能无法识别草坪杂草，空结果不代表没有杂草。</p>
+        <div class="table-scroll" id="detection-table-wrapper">
+          <table>
+            <thead><tr><th scope="col">类别</th><th scope="col">置信度</th><th scope="col">边框（像素）</th><th scope="col">中心点（像素）</th><th scope="col">面积（像素）</th><th scope="col">地面坐标</th></tr></thead>
+            <tbody id="detections-body"></tbody>
+          </table>
+        </div>
+        <p class="hint">类别名称来自当前模型。坐标基于方向校正后的原图，中心点和面积由分割掩膜计算。</p>
+      </div>
+      <details id="raw-section" hidden>
+        <summary>查看原始 JSON 响应</summary>
+        <p class="hint">保留原始字段名和时间戳精度；掩膜多边形位于 mask_polygon_px 字段。</p>
+        <pre id="raw-response" tabindex="0" aria-label="原始接口响应"></pre>
+      </details>
+    </section>
+    <footer>视觉与局部映射测试 · 地面位置依赖标定与当前地面条件 · 未接入执行机构控制</footer>
+  </main>
+</body>
+</html>

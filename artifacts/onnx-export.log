@@ -1,0 +1,21 @@
+YOLOv5  af08ba1 Python-3.12.2 torch-2.14.1+cpu CPU
+
+Fusing layers... 
+YOLOv5n-seg summary: 131 layers, 1,986,637 parameters, 0 gradients, 7.1 GFLOPs
+YOLOv5  af08ba1 Python-3.12.2 torch-2.14.1+cpu CPU
+
+Fusing layers... 
+YOLOv5n-seg summary: 131 layers, 1,986,637 parameters, 0 gradients, 7.1 GFLOPs
+
+[34m[1mPyTorch:[0m starting from C:\Users\Lenovo\AppData\Local\Temp\weed-onnx-xmbby7ji\yolov5n-seg.pt with output shape (1, 25200, 117) (4.1 MB)
+
+[34m[1mONNX:[0m starting export with onnx 1.23.2...
+[34m[1mONNX:[0m export success  0.5s, saved as C:\Users\Lenovo\AppData\Local\Temp\weed-onnx-xmbby7ji\yolov5n-seg.onnx (8.0 MB)
+
+Export complete (0.9s)
+Results saved to [1mC:\Users\Lenovo\AppData\Local\Temp\weed-onnx-xmbby7ji[0m
+Detect:          python segment\predict.py --weights C:\Users\Lenovo\AppData\Local\Temp\weed-onnx-xmbby7ji\yolov5n-seg.onnx 
+Validate:        python segment\val.py --weights C:\Users\Lenovo\AppData\Local\Temp\weed-onnx-xmbby7ji\yolov5n-seg.onnx 
+PyTorch Hub:     model = torch.hub.load('ultralytics/yolov5', 'custom', 'C:\Users\Lenovo\AppData\Local\Temp\weed-onnx-xmbby7ji\yolov5n-seg.onnx')  # WARNING  SegmentationModel not yet supported for PyTorch Hub AutoShape inference
+Visualize:       https://netron.app
+ONNX and metadata written: D:\世界院校职业技能大赛\模型部署\lawn-weed-vision\artifacts\yolov5n-seg.fp32.onnx

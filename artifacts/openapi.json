@@ -1,0 +1,403 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Lawn Weed Vision Prototype",
+    "description": "Local-first instance segmentation. The default COCO model is a deployment smoke test and has not been trained to identify lawn weeds. All ground_position_m values remain null until calibration is implemented.",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/weed-segmentation": {
+      "post": {
+        "summary": "Weed Segmentation",
+        "operationId": "weed_segmentation_v1_weed_segmentation_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_weed_segmentation_v1_weed_segmentation_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SegmentationResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request Entity Too Large",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "415": {
+            "description": "Unsupported Media Type",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Body_weed_segmentation_v1_weed_segmentation_post": {
+        "properties": {
+          "file": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "File",
+            "description": "One JPEG, PNG, or WebP image."
+          },
+          "camera_id": {
+            "type": "string",
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,63}$",
+            "title": "Camera Id"
+          },
+          "capture_timestamp_ns": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 9.223372036854776e+18,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Capture Timestamp Ns"
+          }
+        },
+        "type": "object",
+        "required": [
+          "file",
+          "camera_id"
+        ],
+        "title": "Body_weed_segmentation_v1_weed_segmentation_post"
+      },
+      "Detection": {
+        "properties": {
+          "class_name": {
+            "type": "string",
+            "title": "Class Name"
+          },
+          "confidence": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Confidence"
+          },
+          "bbox_xyxy": {
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array",
+            "maxItems": 4,
+            "minItems": 4,
+            "title": "Bbox Xyxy"
+          },
+          "centroid_px": {
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array",
+            "maxItems": 2,
+            "minItems": 2,
+            "title": "Centroid Px"
+          },
+          "area_px": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Area Px"
+          },
+          "mask_polygon_px": {
+            "items": {
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array",
+              "maxItems": 2,
+              "minItems": 2
+            },
+            "type": "array",
+            "minItems": 3,
+            "title": "Mask Polygon Px"
+          },
+          "ground_position_m": {
+            "type": "null",
+            "title": "Ground Position M"
+          }
+        },
+        "type": "object",
+        "required": [
+          "class_name",
+          "confidence",
+          "bbox_xyxy",
+          "centroid_px",
+          "area_px",
+          "mask_polygon_px"
+        ],
+        "title": "Detection"
+      },
+      "ErrorDetail": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "details": {
+            "anyOf": [
+              {
+                "items": {
+                  "additionalProperties": true,
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Details"
+          }
+        },
+        "type": "object",
+        "required": [
+          "code",
+          "message"
+        ],
+        "title": "ErrorDetail"
+      },
+      "ErrorResponse": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ErrorDetail"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_id",
+          "error"
+        ],
+        "title": "ErrorResponse"
+      },
+      "HealthResponse": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "ok",
+              "unavailable"
+            ],
+            "title": "Status"
+          },
+          "model_ready": {
+            "type": "boolean",
+            "title": "Model Ready"
+          },
+          "model_version": {
+            "type": "string",
+            "title": "Model Version"
+          },
+          "model_path": {
+            "type": "string",
+            "title": "Model Path"
+          },
+          "detail": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status",
+          "model_ready",
+          "model_version",
+          "model_path"
+        ],
+        "title": "HealthResponse"
+      },
+      "SegmentationResponse": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "camera_id": {
+            "type": "string",
+            "title": "Camera Id"
+          },
+          "capture_timestamp_ns": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Capture Timestamp Ns"
+          },
+          "model_version": {
+            "type": "string",
+            "title": "Model Version"
+          },
+          "image_width": {
+            "type": "integer",
+            "title": "Image Width"
+          },
+          "image_height": {
+            "type": "integer",
+            "title": "Image Height"
+          },
+          "inference_ms": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Inference Ms"
+          },
+          "detections": {
+            "items": {
+              "$ref": "#/components/schemas/Detection"
+            },
+            "type": "array",
+            "title": "Detections"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_id",
+          "camera_id",
+          "capture_timestamp_ns",
+          "model_version",
+          "image_width",
+          "image_height",
+          "inference_ms",
+          "detections"
+        ],
+        "title": "SegmentationResponse"
+      }
+    }
+  }
+}

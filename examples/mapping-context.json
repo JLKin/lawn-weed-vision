@@ -1,0 +1,24 @@
+{
+  "camera_id": "front_rgb",
+  "capture_timestamp_ns": "1792735200123456789",
+  "clock_id": "jetson",
+  "image_space": "raw",
+  "calibration_id": null,
+  "ground_plane_valid": false,
+  "radar": {
+    "radar_id": "radar0",
+    "frame_id": "radar_frame",
+    "capture_timestamp_ns": "1792735200133456789",
+    "clock_id": "jetson",
+    "targets": [
+      {"target_id": "sample_target", "coordinate_type": "cartesian3d", "position_m": [1.5, 0.1, 0.2], "radial_velocity_mps": 0.0}
+    ]
+  },
+  "altitude": {
+    "sensor_id": "gps0",
+    "capture_timestamp_ns": "1792735200123456789",
+    "clock_id": "jetson",
+    "value_m": 100.0,
+    "reference": "msl"
+  }
+}

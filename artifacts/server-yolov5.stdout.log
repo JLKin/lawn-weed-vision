@@ -1,0 +1,12 @@
+YOLOv5  af08ba1 Python-3.12.2 torch-2.14.1+cpu CPU
+
+Fusing layers... 
+YOLOv5n-seg summary: 131 layers, 1,986,637 parameters, 0 gradients, 7.1 GFLOPs
+INFO:     127.0.0.1:61271 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61273 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61282 - "GET /api-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61288 - "POST /v1/weed-segmentation HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54800 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54800 - "GET /static/style.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:52684 - "GET /static/app.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:52684 - "GET /health HTTP/1.1" 200 OK
